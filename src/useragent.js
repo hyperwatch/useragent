@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 const debug = require('debug');
 
 const regexes = require('../data/regexes');
@@ -468,6 +471,10 @@ exports.parse = function parse(
     userAgent = userAgent.substring(0, 1000);
   }
 
+  if (process.env.HYPERWATCH_USERAGENT_STORE) {
+    store(userAgent);
+  }
+
   // Remove known artefacts
   userAgent = userAgent.replace(',gzip(gfe)', '');
 
@@ -611,3 +618,30 @@ exports.addRegex = function addRegex(type, object) {
   object.regex = new RegExp(object.regex, object.regex_flag || '');
   regexes[type].unshift(object);
 };
+
+const uas = {};
+
+const alphabeticalSort = (a, b) =>
+  a.toLowerCase().localeCompare(b.toLowerCase());
+
+const prettyJsonStringify = (value) => JSON.stringify(value, null, 2);
+
+function store(ua) {
+  const date = new Date().toISOString().slice(0, 10);
+  const filename = path.join(__dirname, '../data/ua', `${date}.json`);
+  if (uas[date] === undefined) {
+    try {
+      uas[date] = require(filename);
+    } catch (err) {
+      uas[date] = [];
+    }
+  }
+
+  if (!uas[date].includes(ua)) {
+    uas[date].push(ua);
+    fs.writeFileSync(
+      filename,
+      prettyJsonStringify(uas[date].sort(alphabeticalSort))
+    );
+  }
+}
