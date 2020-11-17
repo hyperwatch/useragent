@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/hyperwatch/useragent.git"
   },
-  "version": "3.7.2",
+  "version": "3.7.3",
   "main": "src/useragent.js",
   "scripts": {
     "depcheck": "depcheck",
