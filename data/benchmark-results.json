@@ -1,0 +1,20 @@
+{
+  "opencollective-2020-11": {
+    "total": 1525,
+    "hyperwatch": {
+      "average": 0.0112,
+      "miss": 14,
+      "missPercentage": 0.92
+    },
+    "uap": {
+      "average": 0.0719,
+      "miss": 55,
+      "missPercentage": 3.6
+    },
+    "combined": {
+      "average": 0.0162,
+      "miss": 0,
+      "missPercentage": 0
+    }
+  }
+}

@@ -628,7 +628,7 @@ const prettyJsonStringify = (value) => JSON.stringify(value, null, 2);
 
 function store(ua) {
   const date = new Date().toISOString().slice(0, 10);
-  const filename = path.join(__dirname, '../data/ua', `${date}.json`);
+  const filename = path.join(__dirname, '../data/store', `${date}.json`);
   if (uas[date] === undefined) {
     try {
       uas[date] = require(filename);
