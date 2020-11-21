@@ -1,7 +1,4 @@
 user_agent_parsers:
-  # Example: Chrome/71.0.3578.98 Safari/537.36; 360Spider
-  - regex: '(360Spider)'
-
   - regex: (apimon\.de)
 
   - regex: (AppEngine-Google)
@@ -45,9 +42,6 @@ user_agent_parsers:
 
   # Example: KHTML/4.9.1 (like Gecko) Konqueror/4.9
   - regex: '(Konqueror)\/(\d+)\.(\d+)'
-
-  - regex: 'LBBROWSER'
-    family_replacement: 'Liebao Browser'
 
   # Example: Version/4.0 Mobile Safari/534.30 Opera News/1.0
   - regex: '(Opera News)\/(\d+)\.(\d+)'

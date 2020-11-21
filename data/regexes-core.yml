@@ -28,6 +28,10 @@ chrome:
   - regex: '(SE 2.X MetaSr) (\d+)\.(\d+)'
     family_replacement: 'Sogou Explorer'
 
+  # Brave
+  # Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/84.0.4147.89 Safari/537.36
+  - regex: '(Brave) Chrome/(\d+)\.(\d+)\.(\d+)\.(\d+)'
+
 chrome_electron:
   # Example: Code/1.46.0 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36"
   - regex: '(\w+[\w \-\.@]{0,50})/(\d+)\.(\d+)\.(\d+)\.?(\d+)?[a-z0-9~\-\.]* Chrome/\d+\.\d+\.\d+\.\d+ Electron/\d+\.\d+\.\d+'
@@ -91,10 +95,7 @@ gecko:
   - regex: 'Thunderbird/\d+\.\d+\.?\d* (\w+[\w \-\.@]{0,50})/(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
 
 gecko_generic:
-  # Example: Mozilla/5.0 (Android; Mobile) Gecko/68.0 Firefox/68.0 QwantMobile/3.5
-  # - regex: 'Gecko/\d+\.\d+ Firefox/\d+\.\d+ (QwantMobile)/(\d+)\.(\d+)'
-
-  - regex: 'Gecko/\d+\.\d+ (Firefox)/(\d+)\.(\d+)'
+  - regex: '(Firefox)/(\d+)\.(\d+)\.?(\d+)?$'
 
   # Example: Gecko/20050919 Firefox/1.0.7
   # Example: Gecko/20070817 IceWeasel/2.0.0.6-g3
