@@ -938,5 +938,45 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 (X11; U; Linux i686; it; rv:1.9.0.3) Gecko/2008092510 Ubuntu/8.04 (hardy) Firefox/52.7.0",
+    {
+      "family": "Firefox",
+      "major": "52",
+      "minor": "7",
+      "patch": "0",
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0); 360Spider",
+    {
+      "family": "360Spider",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/84.0.4147.89 Safari/537.36",
+    {
+      "family": "Brave",
+      "major": "84",
+      "minor": "0",
+      "patch": "4147",
+      "patch_minor": "89"
+    }
+  ],
+  [
+    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER",
+    {
+      "family": "Liebao Browser",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
   ]
 ]

@@ -21,6 +21,9 @@
     {
       "regex": "(SE 2.X MetaSr) (\\d+)\\.(\\d+)",
       "family_replacement": "Sogou Explorer"
+    },
+    {
+      "regex": "(Brave) Chrome/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)"
     }
   ],
   "chrome_electron": [
@@ -88,7 +91,7 @@
   ],
   "gecko_generic": [
     {
-      "regex": "Gecko/\\d+\\.\\d+ (Firefox)/(\\d+)\\.(\\d+)"
+      "regex": "(Firefox)/(\\d+)\\.(\\d+)\\.?(\\d+)?$"
     },
     {
       "regex": "Gecko\\/\\d+ ([A-Za-z]+[\\w\\-\\.@]{1,50})[\\/ ]?(\\d+)?\\.?(\\d+)?\\.?(\\d+)?\\.?(\\d+)?"
