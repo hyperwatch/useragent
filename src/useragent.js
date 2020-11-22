@@ -74,7 +74,7 @@ Object.defineProperty(Agent.prototype, 'type', {
 /**
  * OnDemand parsing of the Operating System.
  *
- * @type {OperatingSystem}
+ * @type {Os}
  * @api public
  */
 Object.defineProperty(Agent.prototype, 'os', {
@@ -101,7 +101,7 @@ Object.defineProperty(Agent.prototype, 'os', {
           : res[5];
 
         return Object.defineProperty(this, 'os', {
-          value: new OperatingSystem(family, major, minor, patch, patch_minor),
+          value: new Os(family, major, minor, patch, patch_minor),
         }).os;
       }
     }
@@ -112,13 +112,13 @@ Object.defineProperty(Agent.prototype, 'os', {
   },
 
   /**
-   * Bypass the OnDemand parsing and set an OperatingSystem instance.
+   * Bypass the OnDemand parsing and set an Os instance.
    *
-   * @param {OperatingSystem} os
+   * @param {Os} os
    * @api public
    */
   set: function set(os) {
-    if (os instanceof OperatingSystem) {
+    if (os instanceof Os) {
       Object.defineProperty(this, 'os', {
         value: os,
       });
@@ -267,7 +267,7 @@ Agent.prototype.toJSON = function toJSON() {
  * @param {String} patch Patch version of the os
  * @api public
  */
-function OperatingSystem(family, major, minor, patch, patch_minor) {
+function Os(family, major, minor, patch, patch_minor) {
   this.family = family || null;
   this.major = major || null;
   this.minor = minor || null;
@@ -281,7 +281,7 @@ function OperatingSystem(family, major, minor, patch, patch_minor) {
  * @returns {String} "Operating System 0.0.0"
  * @api public
  */
-OperatingSystem.prototype.toString = function toString() {
+Os.prototype.toString = function toString() {
   let output = this.family;
   const version = this.toVersion();
 
@@ -297,7 +297,7 @@ OperatingSystem.prototype.toString = function toString() {
  * @returns {String}
  * @api public
  */
-OperatingSystem.prototype.toVersion = function toVersion() {
+Os.prototype.toVersion = function toVersion() {
   let version = '';
 
   if (this.major) {
@@ -324,7 +324,7 @@ OperatingSystem.prototype.toVersion = function toVersion() {
  * @returns {String}
  * @api public
  */
-OperatingSystem.prototype.toJSON = function toJSON() {
+Os.prototype.toJSON = function toJSON() {
   return {
     family: this.family,
     major: this.major || null,
@@ -412,7 +412,7 @@ Device.prototype.toJSON = function toJSON() {
  * actually start assembling and exposing everything.
  */
 exports.Device = Device;
-exports.OperatingSystem = OperatingSystem;
+exports.Os = Os;
 exports.Agent = Agent;
 
 /**
@@ -585,7 +585,7 @@ exports.fromJSON = function fromJSON(details) {
   }
 
   if (details.os) {
-    agent.os = new OperatingSystem(
+    agent.os = new Os(
       details.os.family,
       details.os.major,
       details.os.minor,
