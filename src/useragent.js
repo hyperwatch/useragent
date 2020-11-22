@@ -1,21 +1,15 @@
-const fs = require('fs');
-const path = require('path');
-
 const debug = require('debug');
 
-const regexes = require('../data/regexes');
+const regexes = require('../regexes');
 
-const parser = require('./parser');
+const mapping = require('./mapping');
+const preparser = require('./preparser');
+const store = require('./store');
+const utils = require('./utils');
 
 const debugUseragent = debug('hyperwatch:useragent');
 
-function replaceMatches(string, res) {
-  return string
-    .replace('$1', res[1])
-    .replace('$2', res[2])
-    .replace('$3', res[3])
-    .replace('$4', res[4]);
-}
+const { replaceMatches } = utils;
 
 /**
  * The representation of a parsed user agent.
@@ -25,6 +19,7 @@ function replaceMatches(string, res) {
  * @param {String} major Major version of the browser
  * @param {String} minor Minor version of the browser
  * @param {String} patch Patch version of the browser
+ * @param {String} patch_minor Patch version of the browser
  * @param {String} source The actual user agent string
  * @api public
  */
@@ -81,7 +76,7 @@ Object.defineProperty(Agent.prototype, 'os', {
   get: function lazyparse() {
     const userAgent = this.source;
 
-    for (const osRegex of regexes.os) {
+    for (const osRegex of regexes.uapCoreOs) {
       const res = osRegex.regex.exec(userAgent);
       if (res) {
         const family = osRegex.os_replacement
@@ -136,7 +131,7 @@ Object.defineProperty(Agent.prototype, 'device', {
   get: function lazyparse() {
     const userAgent = this.source;
 
-    for (const deviceRegex of regexes.device) {
+    for (const deviceRegex of regexes.uapCoreDevice) {
       const res = deviceRegex.regex.exec(userAgent);
       if (res) {
         const family = deviceRegex.device_replacement
@@ -174,6 +169,7 @@ Object.defineProperty(Agent.prototype, 'device', {
     }
   },
 });
+
 /** * Generates a string output of the parsed user agent.
  *
  * @returns {String}
@@ -265,6 +261,7 @@ Agent.prototype.toJSON = function toJSON() {
  * @param {String} major Major version of the os
  * @param {String} minor Minor version of the os
  * @param {String} patch Patch version of the os
+ * @param {String} patch_minor Patch version of the os
  * @api public
  */
 function Os(family, major, minor, patch, patch_minor) {
@@ -339,9 +336,8 @@ Os.prototype.toJSON = function toJSON() {
  *
  * @constructor
  * @param {String} family The name of the device
- * @param {String} major Major version of the device
- * @param {String} minor Minor version of the device
- * @param {String} patch Patch version of the device
+ * @param {String} brand The brand of the device
+ * @param {String} model The model of the device
  * @api public
  */
 function Device(family, brand, model) {
@@ -486,7 +482,7 @@ exports.parse = function parse(
 
   if (enableCore) {
     regexSets['hyperwatch-first'] = regexes.first;
-    const result = parser.parse(userAgent);
+    const result = preparser.parse(userAgent);
     if (result.meta) {
       debugUseragent(result.meta);
     }
@@ -498,7 +494,7 @@ exports.parse = function parse(
     regexSets['hyperwatch-extra'] = regexes.extra;
   }
   if (enableUapCore) {
-    regexSets['uap-core'] = regexes.agent;
+    regexSets['uap-core'] = regexes.uapCoreAgent;
   }
 
   for (const [setName, regexSet] of Object.entries(regexSets)) {
@@ -516,7 +512,7 @@ exports.parse = function parse(
       const res = regex.exec(userAgent);
       if (res) {
         debugUseragent(regex);
-        const family = parser.processFamily(
+        const family = mapping.processFamily(
           family_replacement ? replaceMatches(family_replacement, res) : res[1]
         );
 
@@ -618,30 +614,3 @@ exports.addRegex = function addRegex(type, object) {
   object.regex = new RegExp(object.regex, object.regex_flag || '');
   regexes[type].unshift(object);
 };
-
-const uas = {};
-
-const alphabeticalSort = (a, b) =>
-  a.toLowerCase().localeCompare(b.toLowerCase());
-
-const prettyJsonStringify = (value) => JSON.stringify(value, null, 2);
-
-function store(ua) {
-  const date = new Date().toISOString().slice(0, 10);
-  const filename = path.join(__dirname, '../data/store', `${date}.json`);
-  if (uas[date] === undefined) {
-    try {
-      uas[date] = require(filename);
-    } catch (err) {
-      uas[date] = [];
-    }
-  }
-
-  if (!uas[date].includes(ua)) {
-    uas[date].push(ua);
-    fs.writeFileSync(
-      filename,
-      prettyJsonStringify(uas[date].sort(alphabeticalSort))
-    );
-  }
-}

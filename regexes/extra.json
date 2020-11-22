@@ -1,9 +1,5 @@
 [
   {
-    "regex": "([\\w]{2,32}(?:browser|app|crawler|spider|messenger))",
-    "regex_flag": "i"
-  },
-  {
     "regex": "(apimon\\.de)"
   },
   {
@@ -52,10 +48,6 @@
   },
   {
     "regex": "(Konqueror)\\/(\\d+)\\.(\\d+)"
-  },
-  {
-    "regex": "LBBROWSER",
-    "family_replacement": "Liebao Browser"
   },
   {
     "regex": "(Opera News)\\/(\\d+)\\.(\\d+)"

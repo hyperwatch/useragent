@@ -1,4 +1,4 @@
-const regexes = require('../data/regexes');
+const regexes = require('../regexes');
 
 function parse(ua) {
   if (ua.startsWith('Mozilla/5')) {
@@ -163,48 +163,4 @@ function parseMozilla4Compatible() {
   };
 }
 
-const familyMapping = {
-  'baidu.sogo.uc.UCBrowser': 'UCBrowser',
-  'coc coc browser': 'Coc Coc Browser',
-  'coccocbot-image': 'Coc Coc Bot Image',
-  'coccocbot-web': 'Coc Coc Bot Web',
-  'Ecosia android': 'Ecosia',
-  'Ecosia ios': 'Ecosia',
-  'jp.co.yahoo.ipn.appli': 'Yahoo Japan',
-  LBBROWSER: 'Liebao Browser',
-  'SemrushBot-BA': 'SemrushBot',
-  'SemrushBot-SA': 'SemrushBot',
-  'SemrushBot-SI': 'SemrushBot',
-  'um-LN': 'Ubermetrics',
-  bingbot: 'BingBot',
-  BW: 'BuiltWith',
-  coccocbot: 'Coc Coc Bot',
-  CriOS: 'Chrome',
-  Edg: 'Edge',
-  EdgA: 'Edge',
-  EdgW: 'Edge',
-  EdgiOS: 'Edge',
-  facebookexternalhit: 'FacebookBot',
-  FxiOS: 'Firefox',
-  GSA: 'Google Search App',
-  MicroMessenger: 'WeChat',
-  MQQBrowser: 'QQBrowser',
-  OPR: 'Opera',
-  SznProhlizec: 'Seznam',
-  UBrowser: 'UCBrowser',
-  YaBrowser: 'Yandex Browser',
-  // From uap-core
-  'Amazon Silk': 'Silk',
-  'Chrome Mobile': 'Chrome',
-  'Chrome Mobile WebView': 'Chrome WebView',
-  'Mobile Safari': 'Safari',
-  'Mobile Safari UI WKWebView': 'Safari WebView',
-  'UC Browser': 'UCBrowser',
-};
-
-function processFamily(family) {
-  family = family.replace(/_|\//g, ' ');
-  return familyMapping[family] || family;
-}
-
-module.exports = { parse, processFamily };
+module.exports = { parse };

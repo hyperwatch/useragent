@@ -11,16 +11,16 @@ fetch(
 
   .then((regexesYaml) => {
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes.yml'),
+      path.resolve(__dirname, '..', 'regexes', 'uap-core.yml'),
       regexesYaml
     );
 
     const regexesFirstYaml = fs
-      .readFileSync(path.resolve(__dirname, '..', 'data', 'regexes-first.yml'))
+      .readFileSync(path.resolve(__dirname, '..', 'regexes', 'first.yml'))
       .toString();
 
     const regexesExtraYaml = fs
-      .readFileSync(path.resolve(__dirname, '..', 'data', 'regexes-extra.yml'))
+      .readFileSync(path.resolve(__dirname, '..', 'regexes', 'extra.yml'))
       .toString();
 
     const regexes = yaml.eval(regexesYaml);
@@ -28,38 +28,38 @@ fetch(
     const regexesFirst = yaml.eval(regexesFirstYaml);
 
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes-first.json'),
+      path.resolve(__dirname, '..', 'regexes', 'first.json'),
       JSON.stringify(regexesFirst.user_agent_parsers, null, 2)
     );
 
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes-extra.json'),
+      path.resolve(__dirname, '..', 'regexes', 'extra.json'),
       JSON.stringify(regexesExtra.user_agent_parsers, null, 2)
     );
 
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes-agent.json'),
+      path.resolve(__dirname, '..', 'regexes', 'uap-core-agent.json'),
       JSON.stringify(regexes.user_agent_parsers, null, 2)
     );
 
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes-os.json'),
+      path.resolve(__dirname, '..', 'regexes', 'uap-core-os.json'),
       JSON.stringify(regexes.os_parsers, null, 2)
     );
 
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes-device.json'),
+      path.resolve(__dirname, '..', 'regexes', 'uap-core-device.json'),
       JSON.stringify(regexes.device_parsers, null, 2)
     );
 
     const regexesCoreYaml = fs
-      .readFileSync(path.resolve(__dirname, '..', 'data', 'regexes-core.yml'))
+      .readFileSync(path.resolve(__dirname, '..', 'regexes', 'core.yml'))
       .toString();
 
     const regexesCore = yaml.eval(regexesCoreYaml);
 
     fs.writeFileSync(
-      path.resolve(__dirname, '..', 'data', 'regexes-core.json'),
+      path.resolve(__dirname, '..', 'regexes', 'core.json'),
       JSON.stringify(regexesCore, null, 2)
     );
   });
