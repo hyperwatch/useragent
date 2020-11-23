@@ -71,7 +71,7 @@ The following methods are available:
 
 ### Agent.toAgent();
 
-Returns the family and version number concatinated in a nice human readable
+Returns the family and version number concatenated in a nice human readable
 string.
 
 ```js
