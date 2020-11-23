@@ -4,6 +4,8 @@ const path = require('path');
 const fetch = require('node-fetch'); // eslint-disable-line node/no-unpublished-require
 const yaml = require('yamlparser'); // eslint-disable-line node/no-unpublished-require
 
+const { prettyJsonStringify } = require('../src/utils');
+
 fetch(
   'https://raw.githubusercontent.com/ua-parser/uap-core/master/regexes.yaml'
 )
@@ -29,27 +31,27 @@ fetch(
 
     fs.writeFileSync(
       path.resolve(__dirname, '..', 'regexes', 'first.json'),
-      JSON.stringify(regexesFirst.user_agent_parsers, null, 2)
+      prettyJsonStringify(regexesFirst.user_agent_parsers)
     );
 
     fs.writeFileSync(
       path.resolve(__dirname, '..', 'regexes', 'extra.json'),
-      JSON.stringify(regexesExtra.user_agent_parsers, null, 2)
+      prettyJsonStringify(regexesExtra.user_agent_parsers)
     );
 
     fs.writeFileSync(
       path.resolve(__dirname, '..', 'regexes', 'uap-core-agent.json'),
-      JSON.stringify(regexes.user_agent_parsers, null, 2)
+      prettyJsonStringify(regexes.user_agent_parsers)
     );
 
     fs.writeFileSync(
       path.resolve(__dirname, '..', 'regexes', 'uap-core-os.json'),
-      JSON.stringify(regexes.os_parsers, null, 2)
+      prettyJsonStringify(regexes.os_parsers)
     );
 
     fs.writeFileSync(
       path.resolve(__dirname, '..', 'regexes', 'uap-core-device.json'),
-      JSON.stringify(regexes.device_parsers, null, 2)
+      prettyJsonStringify(regexes.device_parsers)
     );
 
     const regexesCoreYaml = fs
@@ -60,6 +62,6 @@ fetch(
 
     fs.writeFileSync(
       path.resolve(__dirname, '..', 'regexes', 'core.json'),
-      JSON.stringify(regexesCore, null, 2)
+      prettyJsonStringify(regexesCore)
     );
   });

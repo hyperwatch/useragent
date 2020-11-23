@@ -4,6 +4,7 @@ const path = require('path');
 const { pick } = require('lodash');
 
 const useragent = require('../src/useragent');
+const { prettyJsonStringify } = require('../src/utils');
 
 function parse(filename) {
   const uas = require(path.join(__dirname, '../data/sample', filename));
@@ -24,7 +25,7 @@ function parse(filename) {
     filename.replace('.json', '-parsed.json')
   );
 
-  fs.writeFileSync(parsedFilename, JSON.stringify(parsedUas, null, 2));
+  fs.writeFileSync(parsedFilename, prettyJsonStringify(parsedUas));
 }
 
 fs.readdir(path.join(__dirname, '../data/sample'), (err, filenames) => {
