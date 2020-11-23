@@ -3,38 +3,13 @@ const path = require('path');
 
 const benchmarkResults = require('../data/benchmark-results.json');
 const useragent = require('../src/useragent');
-
-function average(nums) {
-  return nums.reduce((a, b) => a + b) / nums.length;
-}
-
-function formatPercentage(value) {
-  return Number((100 * value).toPrecision(2));
-}
-
-function formatWithPrecision(value, precision = 3) {
-  return Number(value.toPrecision(precision));
-}
-
-function shuffle(array) {
-  let currentIndex = array.length,
-    temporaryValue,
-    randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
+const {
+  average,
+  formatPercentage,
+  formatWithPrecision,
+  shuffle,
+  prettyJsonStringify,
+} = require('../src/utils');
 
 function benchmarkSample(filename) {
   let uas;
@@ -111,7 +86,7 @@ function benchmarkSample(filename) {
 
   fs.writeFileSync(
     path.join(__dirname, '../data', 'benchmark-results.json'),
-    JSON.stringify(benchmarkResults, null, 2)
+    prettyJsonStringify(benchmarkResults)
   );
 }
 
