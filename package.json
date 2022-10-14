@@ -17,7 +17,7 @@
     "prettier": "prettier \"**/*.@(js|json|md|yml)\"",
     "prettier:check": "npm run prettier -- --list-different",
     "prettier:write": "npm run prettier -- --write",
-    "update": "node scripts/update && prettier data/* --write"
+    "update": "node scripts/update && npm run prettier:write"
   },
   "dependencies": {
     "debug": "^4.3.1",
