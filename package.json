@@ -1,5 +1,6 @@
 {
   "name": "@hyperwatch/useragent",
+  "version": "3.8.2",
   "description": "User Agent parser",
   "license": "Apache-2.0",
   "author": "François Hodierne <francois@hodierne.net>",
@@ -7,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/hyperwatch/useragent.git"
   },
-  "version": "3.8.2",
   "main": "src/useragent.js",
   "scripts": {
     "depcheck": "depcheck",
@@ -17,7 +17,7 @@
     "prettier": "prettier \"**/*.@(js|json|md|yml)\"",
     "prettier:check": "npm run prettier -- --list-different",
     "prettier:write": "npm run prettier -- --write",
-    "update": "node scripts/update && prettier data/* --write"
+    "update": "node scripts/update && npm run prettier:write"
   },
   "dependencies": {
     "debug": "^4.3.1",

@@ -70,13 +70,13 @@
     "regex": "(MusicDownloader)Lite/(\\d+)\\.(\\d+)\\.(\\d+) CFNetwork"
   },
   {
-    "regex": "^(.*)-iPad\\/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)(?:\\.(\\d+)|) CFNetwork"
+    "regex": "^(.{0,200})-iPad\\/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)(?:\\.(\\d+)|) CFNetwork"
   },
   {
-    "regex": "^(.*)-iPhone/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)(?:\\.(\\d+)|) CFNetwork"
+    "regex": "^(.{0,200})-iPhone/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)(?:\\.(\\d+)|) CFNetwork"
   },
   {
-    "regex": "^(.*)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)(?:\\.(\\d+)|) CFNetwork"
+    "regex": "^(.{0,200})/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)(?:\\.(\\d+)|) CFNetwork"
   },
   {
     "regex": "^(Luminary)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)"
@@ -128,7 +128,7 @@
     "family_replacement": "Tableau"
   },
   {
-    "regex": "AppleWebKit/\\d+\\.\\d+.* Safari.* (CreativeCloud)/(\\d+)\\.(\\d+).(\\d+)",
+    "regex": "AppleWebKit/\\d{1,10}\\.\\d{1,10}.{0,200} Safari.{0,200} (CreativeCloud)/(\\d+)\\.(\\d+).(\\d+)",
     "family_replacement": "Adobe CreativeCloud"
   },
   {
@@ -143,7 +143,7 @@
     "family_replacement": "FacebookBot"
   },
   {
-    "regex": "Google.*/\\+/web/snippet",
+    "regex": "Google.{0,50}/\\+/web/snippet",
     "family_replacement": "GooglePlusBot"
   },
   {
@@ -162,24 +162,24 @@
     "regex": "/((?:Ant-|)Nutch|[A-z]+[Bb]ot|[A-z]+[Ss]pider|Axtaris|fetchurl|Isara|ShopSalad|Tailsweep)[ \\-](\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "\\b(008|Altresium|Argus|BaiduMobaider|BoardReader|DNSGroup|DataparkSearch|EDI|Goodzer|Grub|INGRID|Infohelfer|LinkedInBot|LOOQ|Nutch|OgScrper|PathDefender|Peew|PostPost|Steeler|Twitterbot|VSE|WebCrunch|WebZIP|Y!J-BR[A-Z]|YahooSeeker|envolk|sproose|wminer)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)"
+    "regex": "\\b(008|Altresium|Argus|BaiduMobaider|BoardReader|DNSGroup|DataparkSearch|EDI|Goodzer|Grub|INGRID|Infohelfer|LinkedInBot|LOOQ|Nutch|OgScrper|Pandora|PathDefender|Peew|PostPost|Steeler|Twitterbot|VSE|WebCrunch|WebZIP|Y!J-BR[A-Z]|YahooSeeker|envolk|sproose|wminer)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "(MSIE) (\\d+)\\.(\\d+)([a-z]\\d|[a-z]|);.* MSIECrawler",
+    "regex": "(MSIE) (\\d+)\\.(\\d+)([a-z]\\d|[a-z]|);.{0,200} MSIECrawler",
     "family_replacement": "MSIECrawler"
   },
   {
     "regex": "(DAVdroid)/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "(Google-HTTP-Java-Client|Apache-HttpClient|Go-http-client|scalaj-http|http%20client|Python-urllib|HttpMonitor|TLSProber|WinHTTP|JNLP|okhttp|aihttp|reqwest|axios|unirest-(?:java|python|ruby|nodejs|php|net))(?:[ /](\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
+    "regex": "(Google-HTTP-Java-Client|Apache-HttpClient|PostmanRuntime|Go-http-client|scalaj-http|http%20client|Python-urllib|HttpMonitor|TLSProber|WinHTTP|JNLP|okhttp|aihttp|reqwest|axios|unirest-(?:java|python|ruby|nodejs|php|net))(?:[ /](\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
   },
   {
     "regex": "(Pinterest(?:bot|))/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)[;\\s(]+\\+https://www.pinterest.com/bot.html",
     "family_replacement": "Pinterestbot"
   },
   {
-    "regex": "(CSimpleSpider|Cityreview Robot|CrawlDaddy|CrawlFire|Finderbots|Index crawler|Job Roboter|KiwiStatus Spider|Lijit Crawler|QuerySeekerSpider|ScollSpider|Trends Crawler|USyd-NLP-Spider|SiteCat Webbot|BotName\\/\\$BotVersion|123metaspider-Bot|1470\\.net crawler|50\\.nu|8bo Crawler Bot|Aboundex|Accoona-[A-z]{1,30}-Agent|AdsBot-Google(?:-[a-z]{1,30}|)|altavista|AppEngine-Google|archive.{0,30}\\.org_bot|archiver|Ask Jeeves|[Bb]ai[Dd]u[Ss]pider(?:-[A-Za-z]{1,30})(?:-[A-Za-z]{1,30}|)|bingbot|BingPreview|blitzbot|BlogBridge|Bloglovin|BoardReader Blog Indexer|BoardReader Favicon Fetcher|boitho.com-dc|BotSeer|BUbiNG|\\b\\w{0,30}favicon\\w{0,30}\\b|\\bYeti(?:-[a-z]{1,30}|)|Catchpoint(?: bot|)|[Cc]harlotte|Checklinks|clumboot|Comodo HTTP\\(S\\) Crawler|Comodo-Webinspector-Crawler|ConveraCrawler|CRAWL-E|CrawlConvera|Daumoa(?:-feedfetcher|)|Feed Seeker Bot|Feedbin|findlinks|Flamingo_SearchEngine|FollowSite Bot|furlbot|Genieo|gigabot|GomezAgent|gonzo1|(?:[a-zA-Z]{1,30}-|)Googlebot(?:-[a-zA-Z]{1,30}|)|Google SketchUp|grub-client|gsa-crawler|heritrix|HiddenMarket|holmes|HooWWWer|htdig|ia_archiver|ICC-Crawler|Icarus6j|ichiro(?:/mobile|)|IconSurf|IlTrovatore(?:-Setaccio|)|InfuzApp|Innovazion Crawler|InternetArchive|IP2[a-z]{1,30}Bot|jbot\\b|KaloogaBot|Kraken|Kurzor|larbin|LEIA|LesnikBot|Linguee Bot|LinkAider|LinkedInBot|Lite Bot|Llaut|lycos|Mail\\.RU_Bot|masscan|masidani_bot|Mediapartners-Google|Microsoft .{0,30} Bot|mogimogi|mozDex|MJ12bot|msnbot(?:-media {0,2}|)|msrbot|Mtps Feed Aggregation System|netresearch|Netvibes|NewsGator[^/]{0,30}|^NING|Nutch[^/]{0,30}|Nymesis|ObjectsSearch|OgScrper|Orbiter|OOZBOT|PagePeeker|PagesInventory|PaxleFramework|Peeplo Screenshot Bot|PlantyNet_WebRobot|Pompos|Qwantify|Read%20Later|Reaper|RedCarpet|Retreiver|Riddler|Rival IQ|scooter|Scrapy|Scrubby|searchsight|seekbot|semanticdiscovery|SemrushBot|Simpy|SimplePie|SEOstats|SimpleRSS|SiteCon|Slackbot-LinkExpanding|Slack-ImgProxy|Slurp|snappy|Speedy Spider|Squrl Java|Stringer|TheUsefulbot|ThumbShotsBot|Thumbshots\\.ru|Tiny Tiny RSS|Twitterbot|WhatsApp|URL2PNG|Vagabondo|VoilaBot|^vortex|Votay bot|^voyager|WASALive.Bot|Web-sniffer|WebThumb|WeSEE:[A-z]{1,30}|WhatWeb|WIRE|WordPress|Wotbox|www\\.almaden\\.ibm\\.com|Xenu(?:.s|) Link Sleuth|Xerka [A-z]{1,30}Bot|yacy(?:bot|)|YahooSeeker|Yahoo! Slurp|Yandex\\w{1,30}|YodaoBot(?:-[A-z]{1,30}|)|YottaaMonitor|Yowedo|^Zao|^Zao-Crawler|ZeBot_www\\.ze\\.bz|ZooShot|ZyBorg|ArcGIS Hub Indexer)(?:[ /]v?(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)|)"
+    "regex": "(CSimpleSpider|Cityreview Robot|CrawlDaddy|CrawlFire|Finderbots|Index crawler|Job Roboter|KiwiStatus Spider|Lijit Crawler|QuerySeekerSpider|ScollSpider|Trends Crawler|USyd-NLP-Spider|SiteCat Webbot|BotName\\/\\$BotVersion|123metaspider-Bot|1470\\.net crawler|50\\.nu|8bo Crawler Bot|Aboundex|Accoona-[A-z]{1,30}-Agent|AdsBot-Google(?:-[a-z]{1,30}|)|altavista|AppEngine-Google|archive.{0,30}\\.org_bot|archiver|Ask Jeeves|[Bb]ai[Dd]u[Ss]pider(?:-[A-Za-z]{1,30})(?:-[A-Za-z]{1,30}|)|bingbot|BingPreview|blitzbot|BlogBridge|Bloglovin|BoardReader Blog Indexer|BoardReader Favicon Fetcher|boitho.com-dc|BotSeer|BUbiNG|\\b\\w{0,30}favicon\\w{0,30}\\b|\\bYeti(?:-[a-z]{1,30}|)|Catchpoint(?: bot|)|[Cc]harlotte|Checklinks|clumboot|Comodo HTTP\\(S\\) Crawler|Comodo-Webinspector-Crawler|ConveraCrawler|CRAWL-E|CrawlConvera|Daumoa(?:-feedfetcher|)|Feed Seeker Bot|Feedbin|findlinks|Flamingo_SearchEngine|FollowSite Bot|furlbot|Genieo|gigabot|GomezAgent|gonzo1|(?:[a-zA-Z]{1,30}-|)Googlebot(?:-[a-zA-Z]{1,30}|)|Google SketchUp|grub-client|gsa-crawler|heritrix|HiddenMarket|holmes|HooWWWer|htdig|ia_archiver|ICC-Crawler|Icarus6j|ichiro(?:/mobile|)|IconSurf|IlTrovatore(?:-Setaccio|)|InfuzApp|Innovazion Crawler|InternetArchive|IP2[a-z]{1,30}Bot|jbot\\b|KaloogaBot|Kraken|Kurzor|larbin|LEIA|LesnikBot|Linguee Bot|LinkAider|LinkedInBot|Lite Bot|Llaut|lycos|Mail\\.RU_Bot|masscan|masidani_bot|Mediapartners-Google|Microsoft .{0,30} Bot|mogimogi|mozDex|MJ12bot|msnbot(?:-media {0,2}|)|msrbot|Mtps Feed Aggregation System|netresearch|Netvibes|NewsGator[^/]{0,30}|^NING|Nutch[^/]{0,30}|Nymesis|ObjectsSearch|OgScrper|Orbiter|OOZBOT|PagePeeker|PagesInventory|PaxleFramework|Peeplo Screenshot Bot|PHPCrawl|PlantyNet_WebRobot|Pompos|Qwantify|Read%20Later|Reaper|RedCarpet|Retreiver|Riddler|Rival IQ|scooter|Scrapy|Scrubby|searchsight|seekbot|semanticdiscovery|SemrushBot|Simpy|SimplePie|SEOstats|SimpleRSS|SiteCon|Slackbot-LinkExpanding|Slack-ImgProxy|Slurp|snappy|Speedy Spider|Squrl Java|Stringer|TheUsefulbot|ThumbShotsBot|Thumbshots\\.ru|Tiny Tiny RSS|Twitterbot|WhatsApp|URL2PNG|Vagabondo|VoilaBot|^vortex|Votay bot|^voyager|WASALive.Bot|Web-sniffer|WebThumb|WeSEE:[A-z]{1,30}|WhatWeb|WIRE|WordPress|Wotbox|www\\.almaden\\.ibm\\.com|Xenu(?:.s|) Link Sleuth|Xerka [A-z]{1,30}Bot|yacy(?:bot|)|YahooSeeker|Yahoo! Slurp|Yandex\\w{1,30}|YodaoBot(?:-[A-z]{1,30}|)|YottaaMonitor|Yowedo|^Zao|^Zao-Crawler|ZeBot_www\\.ze\\.bz|ZooShot|ZyBorg|ArcGIS Hub Indexer)(?:[ /]v?(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)|)"
   },
   {
     "regex": "\\b(Boto3?|JetS3t|aws-(?:cli|sdk-(?:cpp|go|java|nodejs|ruby2?|dotnet-(?:\\d{1,2}|core)))|s3fs)/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
@@ -197,25 +197,25 @@
     "regex": "(Tygron Platform) \\((\\d+)\\.(\\d+)\\.(\\d+(?:\\.\\d+| RC \\d+\\.\\d+))"
   },
   {
-    "regex": "\\[(FBAN/MessengerForiOS|FB_IAB/MESSENGER);FBAV/(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)",
+    "regex": "\\[(FBAN/MessengerForiOS|FB_IAB/MESSENGER);FBAV/(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)|)",
     "family_replacement": "Facebook Messenger"
   },
   {
-    "regex": "\\[FB.*;(FBAV)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)",
+    "regex": "\\[FB.{0,300};(FBAV)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)",
     "family_replacement": "Facebook"
   },
   {
-    "regex": "\\[FB.*;",
+    "regex": "\\[FB.{0,300};",
     "family_replacement": "Facebook"
   },
   {
-    "regex": "(?:\\/[A-Za-z0-9\\.]+|) {0,5}([A-Za-z0-9 \\-_\\!\\[\\]:]{0,50}(?:[Aa]rchiver|[Ii]ndexer|[Ss]craper|[Bb]ot|[Ss]pider|[Cc]rawl[a-z]{0,50}))[/ ](\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)"
+    "regex": "^.{0,200}?(?:\\/[A-Za-z0-9\\.]{0,50}|) {0,2}([A-Za-z0-9 \\-_\\!\\[\\]:]{0,50}(?:[Aa]rchiver|[Ii]ndexer|[Ss]craper|[Bb]ot|[Ss]pider|[Cc]rawl[a-z]{0,50}))[/ ](\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)"
   },
   {
-    "regex": "((?:[A-Za-z][A-Za-z0-9 -]{0,50}|)[^C][^Uu][Bb]ot)\\b(?:(?:[ /]| v)(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
+    "regex": "^.{0,200}?((?:[A-Za-z][A-Za-z0-9 -]{0,50}|)[^C][^Uu][Bb]ot)\\b(?:(?:[ /]| v)(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
   },
   {
-    "regex": "((?:[A-z0-9]{1,50}|[A-z\\-]{1,50} ?|)(?: the |)(?:[Ss][Pp][Ii][Dd][Ee][Rr]|[Ss]crape|[Cc][Rr][Aa][Ww][Ll])[A-z0-9]{0,50})(?:(?:[ /]| v)(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
+    "regex": "^.{0,200}?((?:[A-z0-9]{1,50}|[A-z\\-]{1,50} ?|)(?: the |)(?:[Ss][Pp][Ii][Dd][Ee][Rr]|[Ss]crape|[Cc][Rr][Aa][Ww][Ll])[A-z0-9]{0,50})(?:(?:[ /]| v)(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
   },
   {
     "regex": "(HbbTV)/(\\d+)\\.(\\d+)\\.(\\d+) \\("
@@ -228,22 +228,22 @@
     "family_replacement": "Sailfish Browser"
   },
   {
-    "regex": "\\[(Pinterest)/[^\\]]+\\]"
+    "regex": "\\[(Pinterest)/[^\\]]{1,50}\\]"
   },
   {
     "regex": "(Pinterest)(?: for Android(?: Tablet|)|)/(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "Mozilla.*Mobile.*(Instagram).(\\d+)\\.(\\d+)\\.(\\d+)"
+    "regex": "Mozilla.{1,200}Mobile.{1,100}(Instagram).(\\d+)\\.(\\d+)\\.(\\d+)"
   },
   {
-    "regex": "Mozilla.*Mobile.*(Flipboard).(\\d+)\\.(\\d+)\\.(\\d+)"
+    "regex": "Mozilla.{1,200}Mobile.{1,100}(Flipboard).(\\d+)\\.(\\d+)\\.(\\d+)"
   },
   {
-    "regex": "Mozilla.*Mobile.*(Flipboard-Briefing).(\\d+)\\.(\\d+)\\.(\\d+)"
+    "regex": "Mozilla.{1,200}Mobile.{1,100}(Flipboard-Briefing).(\\d+)\\.(\\d+)\\.(\\d+)"
   },
   {
-    "regex": "Mozilla.*Mobile.*(Onefootball)\\/Android.(\\d+)\\.(\\d+)\\.(\\d+)"
+    "regex": "Mozilla.{1,200}Mobile.{1,100}(Onefootball)\\/Android.(\\d+)\\.(\\d+)\\.(\\d+)"
   },
   {
     "regex": "(Snapchat)\\/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)"
@@ -253,16 +253,16 @@
     "family_replacement": "Twitter"
   },
   {
-    "regex": "Mozilla.*Mobile.*AspiegelBot",
-    "family_replacement": "Spider",
-    "brand_replacement": "Spider",
-    "model_replacement": "Smartphone"
+    "regex": "Mozilla.{1,200}Mobile.{1,100}(Phantom\\/ios|android).(\\d+)\\.(\\d+)\\.(\\d+)",
+    "family_replacement": "Phantom"
+  },
+  {
+    "regex": "Mozilla.{1,100}Mobile.{1,100}AspiegelBot",
+    "family_replacement": "Spider"
   },
   {
     "regex": "AspiegelBot",
-    "family_replacement": "Spider",
-    "brand_replacement": "Spider",
-    "model_replacement": "Desktop"
+    "family_replacement": "Spider"
   },
   {
     "regex": "(Firefox)/(\\d+)\\.(\\d+) Basilisk/(\\d+)",
@@ -285,7 +285,7 @@
     "family_replacement": "Firefox Mobile"
   },
   {
-    "regex": "(?:Mobile|Tablet);.*(Firefox)/(\\d+)\\.(\\d+)",
+    "regex": "(?:Mobile|Tablet);.{0,200}(Firefox)/(\\d+)\\.(\\d+)",
     "family_replacement": "Firefox Mobile"
   },
   {
@@ -313,7 +313,7 @@
     "family_replacement": "Firefox ($1)"
   },
   {
-    "regex": "(Firefox).*Tablet browser (\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "(Firefox).{0,200}Tablet browser (\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "MicroB"
   },
   {
@@ -350,21 +350,21 @@
     "family_replacement": "UC Browser"
   },
   {
-    "regex": "(Opera Tablet).*Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
+    "regex": "(Opera Tablet).{0,200}Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
   },
   {
     "regex": "(Opera Mini)(?:/att|)/?(\\d+|)(?:\\.(\\d+)|)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "(Opera)/.+Opera Mobi.+Version/(\\d+)\\.(\\d+)",
+    "regex": "(Opera)/.{1,100}Opera Mobi.{1,100}Version/(\\d+)\\.(\\d+)",
     "family_replacement": "Opera Mobile"
   },
   {
-    "regex": "(Opera)/(\\d+)\\.(\\d+).+Opera Mobi",
+    "regex": "(Opera)/(\\d+)\\.(\\d+).{1,100}Opera Mobi",
     "family_replacement": "Opera Mobile"
   },
   {
-    "regex": "Opera Mobi.+(Opera)(?:/|\\s+)(\\d+)\\.(\\d+)",
+    "regex": "Opera Mobi.{1,100}(Opera)(?:/|\\s+)(\\d+)\\.(\\d+)",
     "family_replacement": "Opera Mobile"
   },
   {
@@ -372,14 +372,14 @@
     "family_replacement": "Opera Mobile"
   },
   {
-    "regex": "(Opera)/9.80.*Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
+    "regex": "(Opera)/9.80.{0,200}Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "(?:Mobile Safari).*(OPR)/(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "(?:Mobile Safari).{1,300}(OPR)/(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "Opera Mobile"
   },
   {
-    "regex": "(?:Chrome).*(OPR)/(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "(?:Chrome).{1,300}(OPR)/(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "Opera"
   },
   {
@@ -391,7 +391,7 @@
     "family_replacement": "Opera Mini"
   },
   {
-    "regex": "Chrome/.+( MMS)/(\\d+).(\\d+).(\\d+)",
+    "regex": "Chrome/.{1,200}( MMS)/(\\d+).(\\d+).(\\d+)",
     "family_replacement": "Opera Neon"
   },
   {
@@ -443,7 +443,7 @@
     "regex": "(Symphony) (\\d+).(\\d+)"
   },
   {
-    "regex": "PLAYSTATION 3.+WebKit",
+    "regex": "PLAYSTATION 3.{1,200}WebKit",
     "family_replacement": "NetFront NX"
   },
   {
@@ -459,7 +459,7 @@
     "family_replacement": "NetFront NX"
   },
   {
-    "regex": "AppleWebKit.+ (NX)/(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "AppleWebKit.{1,200} (NX)/(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "NetFront NX"
   },
   {
@@ -474,11 +474,11 @@
     "regex": "(Puffin)/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)"
   },
   {
-    "regex": "Windows Phone .*(Edge)/(\\d+)\\.(\\d+)",
+    "regex": "Windows Phone .{0,200}(Edge)/(\\d+)\\.(\\d+)",
     "family_replacement": "Edge Mobile"
   },
   {
-    "regex": "(EdgiOS|EdgA)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "(EdgiOS|EdgA)/(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+)|)",
     "family_replacement": "Edge Mobile"
   },
   {
@@ -525,7 +525,7 @@
     "family_replacement": "TopBuzz"
   },
   {
-    "regex": "Mozilla.+Android.+(GSA)/(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "Mozilla.{1,200}Android.{1,200}(GSA)/(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "Google"
   },
   {
@@ -541,11 +541,19 @@
     "family_replacement": "QQ Browser"
   },
   {
-    "regex": "Version/.+(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "Mobile.{0,200}(DuckDuckGo)/(\\d+)",
+    "family_replacement": "DuckDuckGo Mobile"
+  },
+  {
+    "regex": "(Tenta/)(\\d+)\\.(\\d+)\\.(\\d+)",
+    "family_replacement": "Tenta Browser"
+  },
+  {
+    "regex": "Version/.{1,300}(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "Chrome Mobile WebView"
   },
   {
-    "regex": "; wv\\).+(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "; wv\\).{1,300}(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "Chrome Mobile WebView"
   },
   {
@@ -561,7 +569,7 @@
     "family_replacement": "Chrome Mobile"
   },
   {
-    "regex": " Mobile .*(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": " Mobile .{1,300}(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "Chrome Mobile"
   },
   {
@@ -591,7 +599,7 @@
     "family_replacement": "Yandex Browser"
   },
   {
-    "regex": "(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+).* MRCHROME",
+    "regex": "(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+).{0,100} MRCHROME",
     "family_replacement": "Mail.ru Chromium Browser"
   },
   {
@@ -616,6 +624,13 @@
   },
   {
     "regex": "(Ghost)/(\\d+)\\.(\\d+)\\.(\\d+)"
+  },
+  {
+    "regex": "PAN (GlobalProtect)/(\\d+)\\.(\\d+)\\.(\\d+) .{1,100} \\(X11; Linux x86_64\\)"
+  },
+  {
+    "regex": "^(surveyon)/(\\d+)\\.(\\d+)\\.(\\d+)",
+    "family_replacement": "Surveyon"
   },
   {
     "regex": "(Slack_SSB)/(\\d+)\\.(\\d+)\\.(\\d+)",
@@ -652,7 +667,7 @@
     "regex": "Microsoft Office (Word) 2014"
   },
   {
-    "regex": "Outlook-Express\\/7\\.0.*",
+    "regex": "Outlook-Express\\/7\\.0",
     "family_replacement": "Windows Live Mail"
   },
   {
@@ -690,7 +705,7 @@
     "family_replacement": "Brave"
   },
   {
-    "regex": "(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)[\\d.]* Iron[^/]",
+    "regex": "(Chrome)/(\\d+)\\.(\\d+)\\.(\\d+)[\\d.]{0,100} Iron[^/]",
     "family_replacement": "Iron"
   },
   {
@@ -818,7 +833,7 @@
     "regex": "^(Stitcher)/Android"
   },
   {
-    "regex": "^(VLC) .*version (\\d+)\\.(\\d+)\\.(\\d+)"
+    "regex": "^(VLC) .{0,200}version (\\d+)\\.(\\d+)\\.(\\d+)"
   },
   {
     "regex": " (VLC) for"
@@ -828,13 +843,13 @@
     "family_replacement": "VLC"
   },
   {
-    "regex": "^(foobar)\\S+/([^.\\s]+)\\.([^.\\s]+|)\\.?([^.\\s]+|)"
+    "regex": "^(foobar)\\S{1,10}/(\\d+)\\.(\\d+|)\\.?([\\da-z]+|)"
   },
   {
-    "regex": "^(Clementine)\\S+ ([^.\\s]+)\\.([^.\\s]+|)\\.?([^.\\s]+|)"
+    "regex": "^(Clementine)\\S{1,10} (\\d+)\\.(\\d+|)\\.?(\\d+|)"
   },
   {
-    "regex": "(amarok)/([^.\\s]+)\\.([^.\\s]+|)\\.?([^.\\s]+|)",
+    "regex": "(amarok)/(\\d+)\\.(\\d+|)\\.?(\\d+|)",
     "family_replacement": "Amarok"
   },
   {
@@ -874,7 +889,7 @@
     "v1_replacement": "3"
   },
   {
-    "regex": "(MSIE) (\\d+)\\.(\\d+).*XBLWP7",
+    "regex": "(MSIE) (\\d+)\\.(\\d+).{0,100}XBLWP7",
     "family_replacement": "IE Large Screen"
   },
   {
@@ -890,6 +905,17 @@
   {
     "regex": "(OC)/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+) \\(Skype for Business\\)",
     "family_replacement": "Skype"
+  },
+  {
+    "regex": "(OpenVAS)(?:-VT)?(?:[ \\/](\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)",
+    "family_replacement": "OpenVAS Scanner"
+  },
+  {
+    "regex": "(AnyConnect)\\/(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)"
+  },
+  {
+    "regex": "compatible; monitis",
+    "family_replacement": "Monitis"
   },
   {
     "regex": "(Obigo)InternetBrowser"
@@ -941,23 +967,23 @@
     "family_replacement": "TopBuzz"
   },
   {
-    "regex": "(iPod|iPhone|iPad).+GSA/(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+)|) Mobile",
+    "regex": "(iPod|iPhone|iPad).{1,200}GSA/(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+)|) Mobile",
     "family_replacement": "Google"
   },
   {
-    "regex": "(iPod|iPhone|iPad).+Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|).*[ +]Safari",
+    "regex": "(iPod|iPhone|iPad).{1,200}Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|).{1,200}[ +]Safari",
     "family_replacement": "Mobile Safari"
   },
   {
-    "regex": "(iPod|iPod touch|iPhone|iPad);.*CPU.*OS[ +](\\d+)_(\\d+)(?:_(\\d+)|).* AppleNews\\/\\d+\\.\\d+\\.\\d+?",
+    "regex": "(iPod|iPod touch|iPhone|iPad);.{0,30}CPU.{0,30}OS[ +](\\d+)_(\\d+)(?:_(\\d+)|).{0,30} AppleNews\\/\\d+\\.\\d+(?:\\.\\d+|)",
     "family_replacement": "Mobile Safari UI/WKWebView"
   },
   {
-    "regex": "(iPod|iPhone|iPad).+Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)",
+    "regex": "(iPod|iPhone|iPad).{1,200}Version/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)",
     "family_replacement": "Mobile Safari UI/WKWebView"
   },
   {
-    "regex": "(iPod|iPod touch|iPhone|iPad).* Safari",
+    "regex": "(iPod|iPod touch|iPhone|iPad).{0,200} Safari",
     "family_replacement": "Mobile Safari"
   },
   {
@@ -1031,11 +1057,11 @@
     "regex": "(Nokia)[EN]?(\\d+)"
   },
   {
-    "regex": "(PlayBook).+RIM Tablet OS (\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "(PlayBook).{1,200}RIM Tablet OS (\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "BlackBerry WebKit"
   },
   {
-    "regex": "(Black[bB]erry|BB10).+Version/(\\d+)\\.(\\d+)\\.(\\d+)",
+    "regex": "(Black[bB]erry|BB10).{1,200}Version/(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "BlackBerry WebKit"
   },
   {
@@ -1069,11 +1095,11 @@
     "regex": "(PhantomJS)/(\\d+)\\.(\\d+)\\.(\\d+)"
   },
   {
-    "regex": "(AppleWebKit)/(\\d+)(?:\\.(\\d+)|)\\+ .* Safari",
+    "regex": "(AppleWebKit)/(\\d+)(?:\\.(\\d+)|)\\+ .{0,200} Safari",
     "family_replacement": "WebKit Nightly"
   },
   {
-    "regex": "(Version)/(\\d+)\\.(\\d+)(?:\\.(\\d+)|).*Safari/",
+    "regex": "(Version)/(\\d+)\\.(\\d+)(?:\\.(\\d+)|).{0,100}Safari/",
     "family_replacement": "Safari"
   },
   {
@@ -1139,7 +1165,30 @@
     "family_replacement": "Python Requests"
   },
   {
-    "regex": "\\b(Windows-Update-Agent|WindowsPowerShell|Microsoft-CryptoAPI|SophosUpdateManager|SophosAgent|Debian APT-HTTP|Ubuntu APT-HTTP|libcurl-agent|libwww-perl|urlgrabber|curl|PycURL|Wget|wget2|aria2|Axel|OpenBSD ftp|lftp|jupdate|insomnia|fetch libfetch|akka-http|got)(?:[ /](\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
+    "regex": "\\b(Windows-Update-Agent|WindowsPowerShell|Microsoft-CryptoAPI|SophosUpdateManager|SophosAgent|Debian APT-HTTP|Ubuntu APT-HTTP|libcurl-agent|libwww-perl|urlgrabber|curl|PycURL|Wget|wget2|aria2|Axel|OpenBSD ftp|lftp|jupdate|insomnia|fetch libfetch|akka-http|got|CloudCockpitBackend|ReactorNetty|axios|Jersey|Vert.x-WebClient|Apache-CXF|Go-CF-client|go-resty|AHC)(?:[ /](\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)"
+  },
+  {
+    "regex": "^(cf)\\/(\\d+)\\.(\\d+)\\.(\\S+)",
+    "family_replacement": "CloudFoundry"
+  },
+  {
+    "regex": "^(sap-leonardo-iot-sdk-nodejs) \\/ (\\d+)\\.(\\d+)\\.(\\d+)"
+  },
+  {
+    "regex": "^(SAP NetWeaver Application Server) \\(1.0;(\\d{1})(\\d{2})\\)"
+  },
+  {
+    "regex": "^(\\w+-HTTPClient)\\/(\\d+)\\.(\\d+)-(\\S+)",
+    "family_replacement": "HTTPClient"
+  },
+  {
+    "regex": "^(go-cli)\\s(\\d+)\\.(\\d+).(\\S+)"
+  },
+  {
+    "regex": "^(Java-EurekaClient|Java-EurekaClient-Replication|HTTPClient|lua-resty-http)\\/v?(\\d+)\\.(\\d+)\\.?(\\d*)"
+  },
+  {
+    "regex": "^(ping-service|sap xsuaa|Node-oauth|Site24x7|SAP CPI|JAEGER_SECURITY)"
   },
   {
     "regex": "(Python/3\\.\\d{1,3} aiohttp)/(\\d+)\\.(\\d+)\\.(\\d+)",
@@ -1149,10 +1198,25 @@
     "regex": "(Java)[/ ]?\\d+\\.(\\d+)\\.(\\d+)[_-]*([a-zA-Z0-9]+|)"
   },
   {
+    "regex": "(minio-go)/v(\\d+)\\.(\\d+)\\.(\\d+)"
+  },
+  {
+    "regex": "^(ureq)[/ ](\\d+)\\.(\\d+).(\\d+)"
+  },
+  {
+    "regex": "^(http\\.rb)/(\\d+)\\.(\\d+).(\\d+)"
+  },
+  {
+    "regex": "^(GuzzleHttp)/(\\d+)\\.(\\d+).(\\d+)"
+  },
+  {
+    "regex": "^(grab)\\b"
+  },
+  {
     "regex": "^(Cyberduck)/(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.\\d+|)"
   },
   {
-    "regex": "^(S3 Browser) (\\d+)-(\\d+)-(\\d+)(?:\\s*http://s3browser\\.com|)"
+    "regex": "^(S3 Browser) (\\d+)[.-](\\d+)[.-](\\d+)(?:\\s*https?://s3browser\\.com|)"
   },
   {
     "regex": "(S3Gof3r)"
@@ -1179,5 +1243,18 @@
   {
     "regex": "^(ViaFree|Viafree)-(?:tvOS-)?[A-Z]{2}/(\\d+)\\.(\\d+)\\.(\\d+)",
     "family_replacement": "ViaFree"
+  },
+  {
+    "regex": "(Transmit)/(\\d+)\\.(\\d+)\\.(\\d+)"
+  },
+  {
+    "regex": "(Download Master)"
+  },
+  {
+    "regex": "\\b(HTTrack) (\\d+)\\.(\\d+)(?:[\\.\\-](\\d+)|)"
+  },
+  {
+    "regex": "SerenityOS",
+    "family_replacement": "SerenityOS Browser"
   }
 ]
