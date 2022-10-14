@@ -978,5 +978,25 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 (compatible; SeznamBot/3.2-test1; +http://napoveda.seznam.cz/en/seznambot-intro/)",
+    {
+      "family": "SeznamBot",
+      "major": "3",
+      "minor": "2",
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (compatible; SeznamBot/4.0-RC1; +http://napoveda.seznam.cz/seznambot-intro/)",
+    {
+      "family": "SeznamBot",
+      "major": "4",
+      "minor": "0",
+      "patch": null,
+      "patch_minor": null
+    }
   ]
 ]

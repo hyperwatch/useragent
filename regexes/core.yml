@@ -259,7 +259,9 @@ mozilla5_compatible_url:
   - regex: 'compatible; ([\w]+[\w \-\.]{0,50})\/?v?(\d+)?\.?(\d+)?\.?(\d+)?; [\w \-\.]{0,50}; \+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}'
 
   # Example: (compatible; SemrushBot/6~bl; +http://www.semrush.com/bot.html)
-  - regex: 'compatible; ([\w]+[\w \-\.]{0,50})\/(\d+)\.?(\d+)?[a-z0-9~-]*; \+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}'
+  # Example: (compatible; SeznamBot/3.2-test1; +http://napoveda.seznam.cz/en/seznambot-intro/)
+  # Example: (compatible; SeznamBot/4.0-RC1; +http://napoveda.seznam.cz/seznambot-intro/)
+  - regex: 'compatible; ([\w]+[\w \-\.]{0,50})\/(\d+)\.?(\d+)?[A-Za-z0-9~-]*; \+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}'
 
   # Example: (compatible; YandexBot/3.0; +http://yandex.com/bots)
   # Example: (compatible; Bytespider; https://zhanzhang.toutiao.com/)
