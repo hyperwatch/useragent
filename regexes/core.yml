@@ -294,7 +294,8 @@ mozilla5_compatible:
 
 mozilla5:
   # Example: Mozilla/5.0 zgrab/0.x
-  - regex: 'Mozilla/5.0 ([\w]+[\w \-\.[\w]+]{0,50})\/(\d+)\.?(\d+)?'
+  # Example: Mozilla/5.0 scpitspi-rs
+  - regex: 'Mozilla/5.0 ([\w]+[\w \-\.[\w]+]{0,50})\/?(\d+)?\.?(\d+)?'
 
   # Example: Mozilla/5.0
   - regex: '^(Mozilla)/(\d+)\.(\d+)$'

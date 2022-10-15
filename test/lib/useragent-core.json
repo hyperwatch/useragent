@@ -998,5 +998,15 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 scpitspi-rs",
+    {
+      "family": "scpitspi-rs",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
   ]
 ]
