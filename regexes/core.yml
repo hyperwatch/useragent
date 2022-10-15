@@ -247,6 +247,9 @@ generic:
   - regex: '^(Pingdom).com_bot_version_(\d+)\.(\d+)'
     family_replacement: 'PingdomBot'
 
+  # Example: OnlineOrNot.com_bot_1.0_(https://onlineornot.com):
+  - regex: '^([A-Za-z0-9\-\.\/]{0,50})_bot_(\d+)\.(\d+)'
+
   # Example: colly - https://github.com/gocolly/colly/v2
   - regex: '^^(\w+[\w \-\.]{0,50}) \- https?:\/\/[\w]+[\w \-\.]{0,50}'
 
