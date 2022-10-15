@@ -228,6 +228,9 @@ generic:
   # Example: mattermost-5.26.0
   - regex: '^(\w+[\w \-\.:\w]{0,50})\-v?(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
 
+  # Example: GitHub-Hookshot/c02375a
+  - regex: '^(\w+[\w \-\.:\w]{0,50})\/[A-Za-z0-9]{0,50}$'
+
   # Example: ltx71 - (http://ltx71.com/)
   - regex: '^(\w+[\w \-\.]{0,50})\/?(\d+)?\.?(\d+)? \- \(\+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}\)'
 
