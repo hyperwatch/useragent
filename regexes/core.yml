@@ -228,6 +228,9 @@ generic:
   # Example: mattermost-5.26.0
   - regex: '^(\w+[\w \-\.:\w]{0,50})\-v?(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
 
+  # Example: GitHub-Hookshot/c02375a
+  - regex: '^(\w+[\w \-\.:\w]{0,50})\/[A-Za-z0-9]{0,50}$'
+
   # Example: ltx71 - (http://ltx71.com/)
   - regex: '^(\w+[\w \-\.]{0,50})\/?(\d+)?\.?(\d+)? \- \(\+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}\)'
 
@@ -243,6 +246,9 @@ generic:
   # Example: Pingdom.com_bot_version_1.4_(http://www.pingdom.com/)
   - regex: '^(Pingdom).com_bot_version_(\d+)\.(\d+)'
     family_replacement: 'PingdomBot'
+
+  # Example: OnlineOrNot.com_bot_1.0_(https://onlineornot.com):
+  - regex: '^([A-Za-z0-9\-\.\/]{0,50})_bot_(\d+)\.(\d+)'
 
   # Example: colly - https://github.com/gocolly/colly/v2
   - regex: '^^(\w+[\w \-\.]{0,50}) \- https?:\/\/[\w]+[\w \-\.]{0,50}'
@@ -294,7 +300,8 @@ mozilla5_compatible:
 
 mozilla5:
   # Example: Mozilla/5.0 zgrab/0.x
-  - regex: 'Mozilla/5.0 ([\w]+[\w \-\.[\w]+]{0,50})\/(\d+)\.?(\d+)?'
+  # Example: Mozilla/5.0 scpitspi-rs
+  - regex: 'Mozilla/5.0 ([\w]+[\w \-\.[\w]+]{0,50})\/?(\d+)?\.?(\d+)?'
 
   # Example: Mozilla/5.0
   - regex: '^(Mozilla)/(\d+)\.(\d+)$'

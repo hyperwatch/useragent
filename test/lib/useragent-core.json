@@ -998,5 +998,35 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 scpitspi-rs",
+    {
+      "family": "scpitspi-rs",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "GitHub-Hookshot/c02375a",
+    {
+      "family": "GitHub-Hookshot",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "OnlineOrNot.com_bot_1.0_(https://onlineornot.com)",
+    {
+      "family": "OnlineOrNot.com",
+      "major": "1",
+      "minor": "0",
+      "patch": null,
+      "patch_minor": null
+    }
   ]
 ]
