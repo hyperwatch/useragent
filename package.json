@@ -1,6 +1,6 @@
 {
   "name": "@hyperwatch/useragent",
-  "version": "3.9.1",
+  "version": "3.9.3",
   "description": "User Agent parser",
   "license": "Apache-2.0",
   "author": "François Hodierne <francois@hodierne.net>",
