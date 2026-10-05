@@ -1058,5 +1058,35 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "PayPal/AUHD-1.0-1",
+    {
+      "family": "PayPal",
+      "major": "1",
+      "minor": "0",
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Xorxer/1.0",
+    {
+      "family": "Xorxer",
+      "major": "1",
+      "minor": "0",
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "Misskey/Sharkey-2025.5.2-dev-qk.2025.12.03+gdc5c22d8bc (https://fedi.social/)",
+    {
+      "family": "Misskey",
+      "major": "2025",
+      "minor": "5",
+      "patch": "2",
+      "patch_minor": null
+    }
   ]
 ]

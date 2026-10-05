@@ -2800,10 +2800,10 @@
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Weibo (iPhone8,4__weibo__10.4.0__iphone__os13.4.1)": {
-    "family": "Safari WebView",
-    "major": null,
-    "minor": null,
-    "patch": null,
+    "family": "Weibo",
+    "major": "10",
+    "minor": "4",
+    "patch": "0",
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/2.23.0 main0.0000001.0 baiduboxapp/12.0.5.10 (Baidu; P2 13.6) NABar/1.0": {
@@ -15925,11 +15925,11 @@
     "patch_minor": "61"
   },
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.9999.0 Safari/537.36 (Chromium GOST)": {
-    "family": "Chrome",
-    "major": "102",
-    "minor": "0",
-    "patch": "9999",
-    "patch_minor": "0"
+    "family": "Chromium GOST Browser",
+    "major": null,
+    "minor": null,
+    "patch": null,
+    "patch_minor": null
   },
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36": {
     "family": "Chrome",

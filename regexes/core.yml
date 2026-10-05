@@ -221,6 +221,10 @@ generic:
   # Example: http.rb/4.3.0 (Mastodon/3.1.1+glitch; +https://efdn.club/)
   - regex: '(\w+[\w \-\.]{0,50})\/(\d+)?\.?(\d+)?\.?(\d+)?[\w~\-\+\. ]*; ?\+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}'
 
+  # Letters before the version
+  # Example: PayPal/AUHD-1.0-1
+  - regex: '^(\w+[\w\-\.]{0,50})/[A-Za-z]{1,10}\-(\d+)\.(\d+)\.?(\d+)?'
+
   # Example: node-fetch/1.0
   # Example: Recon-ng/v4
   - regex: '^(\w+[\w \-\.:\w]{0,50})\/v?(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
@@ -305,6 +309,10 @@ mozilla5_compatible:
   - regex: '^(Mozilla)/(\d+)\.(\d+) \(compatible;?\)$'
 
 mozilla5:
+  # Platform, then a single agent
+  # Example: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Xorxer/1.0
+  - regex: '^Mozilla/5\.0 \([^()]{1,100}\) (\w+[\w\-\.]{0,50})/(\d+)\.?(\d+)?\.?(\d+)?$'
+
   # Example: Mozilla/5.0 zgrab/0.x
   # Example: Mozilla/5.0 scpitspi-rs
   - regex: 'Mozilla/5.0 ([\w]+[\w \-\.[\w]+]{0,50})\/?(\d+)?\.?(\d+)?'
