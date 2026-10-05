@@ -418,15 +418,14 @@ exports.Agent = Agent;
  * @returns {Boolean}
  */
 function isSafe(userAgent) {
-  let consecutive = 0,
-    code = 0;
+  let consecutive = 0;
 
   if (userAgent.length > 1000) {
     return false;
   }
 
   for (let i = 0; i < userAgent.length; i++) {
-    code = userAgent.charCodeAt(i);
+    const code = userAgent.charCodeAt(i);
     if (
       (code >= 48 && code <= 57) || // numbers
       (code >= 65 && code <= 90) || // letters A-Z
