@@ -9,6 +9,11 @@
     "url": "https://github.com/hyperwatch/useragent.git"
   },
   "main": "src/useragent.js",
+  "files": [
+    "regexes/*.json",
+    "regexes/index.js",
+    "src"
+  ],
   "scripts": {
     "depcheck": "depcheck",
     "lint": "eslint",
