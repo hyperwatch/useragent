@@ -8,5 +8,45 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.9999.0 Safari/537.36 (Chromium GOST)",
+    {
+      "family": "Chromium GOST Browser",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Weibo (iPhone8,4__weibo__10.4.0__iphone__os13.4.1)",
+    {
+      "family": "Weibo",
+      "major": "10",
+      "minor": "4",
+      "patch": "0",
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 ADG/11.0.2566 AOLBUILD/11.0.2566 Safari/537.36",
+    {
+      "family": "AOL Desktop Gold Browser",
+      "major": "11",
+      "minor": "0",
+      "patch": "2566",
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (Linux; Android 14; en; TECNO KL4 Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.7444.171 HiBrowser/v2.25.7.1;lang=es;nation=EC;locale=es_US UWS/ Mobile Safari/537.36",
+    {
+      "family": "HiBrowser",
+      "major": "2",
+      "minor": "25",
+      "patch": "7",
+      "patch_minor": "1"
+    }
   ]
 ]

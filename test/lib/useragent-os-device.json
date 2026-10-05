@@ -1,0 +1,36 @@
+[
+  [
+    "Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)",
+    {
+      "os": {
+        "family": "Other",
+        "major": null,
+        "minor": null,
+        "patch": null,
+        "patch_minor": null
+      },
+      "device": {
+        "family": "Spider",
+        "brand": "Spider",
+        "model": "Smartphone"
+      }
+    }
+  ],
+  [
+    "Mozilla/5.0 (X11; Linux x86_64; Quest 3) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/40.2.0.25.61.795182405 Chrome/138.0.7204.235 VR Safari/537.36",
+    {
+      "os": {
+        "family": "Android",
+        "major": null,
+        "minor": null,
+        "patch": null,
+        "patch_minor": null
+      },
+      "device": {
+        "family": "Quest",
+        "brand": "Meta",
+        "model": "Quest 3"
+      }
+    }
+  ]
+]
