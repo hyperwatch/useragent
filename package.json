@@ -13,7 +13,7 @@
     "depcheck": "depcheck",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "prepare": "husky",
+    "prepare": "node .husky/install.mjs",
     "prettier": "prettier \"**/*.@(js|json|md|yml)\"",
     "prettier:check": "npm run prettier -- --list-different",
     "prettier:write": "npm run prettier -- --write",

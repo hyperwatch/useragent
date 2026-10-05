@@ -88,6 +88,18 @@ export default [
       },
     },
   },
+  // Husky installer: an ES module with top-level await
+  {
+    files: ['.husky/install.mjs'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+    },
+    rules: {
+      // A dev dependency, only run from a checkout
+      'n/no-unpublished-import': 'off',
+    },
+  },
   // Scripts: allow experimental Node.js features (e.g. fetch)
   {
     files: ['scripts/**/*.js'],
