@@ -40,7 +40,7 @@
     "regex": "HbbTV/\\d+\\.\\d+\\.\\d+ \\(.{0,30}; ?([a-zA-Z]+) ?;.{0,30}(201[1-9]).{0,30}\\)"
   },
   {
-    "regex": "AspiegelBot",
+    "regex": "AspiegelBot|PetalBot",
     "os_replacement": "Other"
   },
   {
@@ -55,6 +55,22 @@
   },
   {
     "regex": "ArcGISRuntime-(?:Android|iOS)\\/\\d+\\.\\d+(?:\\.\\d+|) \\((Android|iOS) (\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|);"
+  },
+  {
+    "regex": "(Android) (\\d+)(?:\\.(\\d+)).*CrKey",
+    "os_replacement": "Chromecast Android"
+  },
+  {
+    "regex": "Fuchsia.*(CrKey)(?:[/](\\d+)\\.(\\d+)(?:\\.(\\d+)|)|)",
+    "os_replacement": "Chromecast Fuchsia"
+  },
+  {
+    "regex": "Linux.*(CrKey)(?:[/](\\d+)\\.(\\d+)(?:\\.(\\d+)|)|).*DeviceType/SmartSpeaker",
+    "os_replacement": "Chromecast SmartSpeaker"
+  },
+  {
+    "regex": "Linux.*(CrKey)(?:[/](\\d+)\\.(\\d+)(?:\\.(\\d+)|)|)",
+    "os_replacement": "Chromecast Linux"
   },
   {
     "regex": "(Android)[ \\-/](\\d+)(?:\\.(\\d+)|)(?:[.\\-]([a-z0-9]+)|)"
@@ -107,6 +123,10 @@
   },
   {
     "regex": "(android)\\s(?:mobile\\/)(\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)",
+    "os_replacement": "Android"
+  },
+  {
+    "regex": "Quest",
     "os_replacement": "Android"
   },
   {
@@ -221,6 +241,10 @@
     "regex": "(Tizen)[/ ](\\d+)\\.(\\d+)"
   },
   {
+    "regex": "Intel Mac OS X.+(CriOS|EdgiOS)/\\d+",
+    "os_replacement": "iOS"
+  },
+  {
     "regex": "((?:Mac[ +]?|; )OS[ +]X)[\\s+/](?:(\\d+)[_.](\\d+)(?:[_.](\\d+)|)|Mach-O)",
     "os_replacement": "Mac OS X"
   },
@@ -270,6 +294,10 @@
   },
   {
     "regex": "^Box.{0,200};(Darwin)/(10)\\.(1\\d)(?:\\.(\\d+)|)",
+    "os_replacement": "Mac OS X"
+  },
+  {
+    "regex": "darwin; arm64",
     "os_replacement": "Mac OS X"
   },
   {
@@ -680,6 +708,39 @@
     "os_v1_replacement": "15"
   },
   {
+    "regex": "CFNetwork/.{0,100} Darwin/22\\.([0-5])\\.\\d+",
+    "os_replacement": "iOS",
+    "os_v1_replacement": "16",
+    "os_v2_replacement": "$1"
+  },
+  {
+    "regex": "CFNetwork/.{0,100} Darwin/(22)\\.\\d+",
+    "os_replacement": "iOS",
+    "os_v1_replacement": "16"
+  },
+  {
+    "regex": "CFNetwork/.{0,100} Darwin/23\\.([0-5])\\.\\d+",
+    "os_replacement": "iOS",
+    "os_v1_replacement": "17",
+    "os_v2_replacement": "$1"
+  },
+  {
+    "regex": "CFNetwork/.{0,100} Darwin/(23)\\.\\d+",
+    "os_replacement": "iOS",
+    "os_v1_replacement": "17"
+  },
+  {
+    "regex": "CFNetwork/.{0,100} Darwin/24\\.([0-5])\\.\\d+",
+    "os_replacement": "iOS",
+    "os_v1_replacement": "18",
+    "os_v2_replacement": "$1"
+  },
+  {
+    "regex": "CFNetwork/.{0,100} Darwin/(24)\\.\\d+",
+    "os_replacement": "iOS",
+    "os_v1_replacement": "18"
+  },
+  {
     "regex": "CFNetwork/.{0,100} Darwin/",
     "os_replacement": "iOS"
   },
@@ -850,10 +911,6 @@
     "regex": "(WebTV)/(\\d+).(\\d+)"
   },
   {
-    "regex": "(CrKey)(?:[/](\\d+)\\.(\\d+)(?:\\.(\\d+)|)|)",
-    "os_replacement": "Chromecast"
-  },
-  {
     "regex": "(hpw|web)OS/(\\d+)\\.(\\d+)(?:\\.(\\d+)|)",
     "os_replacement": "webOS"
   },
@@ -901,5 +958,15 @@
   },
   {
     "regex": "^(Roku)/DVP-(\\d+)\\.(\\d+)"
+  },
+  {
+    "regex": "os\\/macos[#]?(\\d*)[.]?(\\d*)[.]?(\\d*)",
+    "os_replacement": "Mac OS X",
+    "os_v1_replacement": "$1",
+    "os_v2_replacement": "$2",
+    "os_v3_replacement": "$3"
+  },
+  {
+    "regex": "(HarmonyOS)[\\s;]+(\\d+|)\\.?(\\d+|)\\.?(\\d+|)"
   }
 ]
