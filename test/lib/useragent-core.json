@@ -1028,5 +1028,35 @@
       "patch": null,
       "patch_minor": null
     }
+  ],
+  [
+    "amazon-Quick-on-behalf-of-b1c594a1",
+    {
+      "family": "amazon-Quick-on-behalf-of",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "amazon-Quick-on-behalf-of-81209fb7",
+    {
+      "family": "amazon-Quick-on-behalf-of",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "amazon-Quick-on-behalf-of-49ab12cd-1234-4abc-9def-0123456789ab",
+    {
+      "family": "amazon-Quick-on-behalf-of",
+      "major": null,
+      "minor": null,
+      "patch": null,
+      "patch_minor": null
+    }
   ]
 ]

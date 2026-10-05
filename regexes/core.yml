@@ -225,6 +225,12 @@ generic:
   # Example: Recon-ng/v4
   - regex: '^(\w+[\w \-\.:\w]{0,50})\/v?(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
 
+  # Name followed by a hex id (8 characters, at least one letter, or a UUID),
+  # before the next rule reads the id's digits as a version
+  # Example: amazon-Quick-on-behalf-of-b1c594a1
+  # Example: amazon-Quick-on-behalf-of-81209fb7
+  - regex: '^(\w+[\w\-\.]{0,50}?)\-(?:(?=\d*[a-f])[0-9a-f]{8}|[0-9a-f]{8}\-[0-9a-f]{4}\-[0-9a-f]{4}\-[0-9a-f]{4}\-[0-9a-f]{12})$'
+
   # Example: mattermost-5.26.0
   - regex: '^(\w+[\w \-\.:\w]{0,50})\-v?(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
 
