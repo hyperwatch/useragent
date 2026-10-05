@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const fetch = require('node-fetch'); // eslint-disable-line node/no-unpublished-require
-const yaml = require('yamlparser'); // eslint-disable-line node/no-unpublished-require
+const yaml = require('yamlparser'); // eslint-disable-line n/no-unpublished-require
 
 const { prettyJsonStringify } = require('../src/utils');
 
