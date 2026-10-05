@@ -1,6 +1,6 @@
 [
   {
-    "regex": "^.{0,100}?(?:(?:iPhone|Windows CE|Windows Phone|Android).{0,300}(?:(?:Bot|Yeti)-Mobile|YRSpider|BingPreview|bots?/\\d|(?:bot|spider)\\.html)|AdsBot-Google-Mobile.{0,200}iPhone)",
+    "regex": "^.{0,100}?(?:(?:iPhone|Windows CE|Windows Phone|Android).{0,300}(?:(?:Bot|Yeti)-Mobile|YRSpider|BingPreview|bots?/\\d|(?:bot|spider)\\.html|Google-InspectionTool)|AdsBot-Google-Mobile.{0,200}iPhone)",
     "regex_flag": "i",
     "device_replacement": "Spider",
     "brand_replacement": "Spider",
@@ -24,13 +24,13 @@
     "brand_replacement": "Spider"
   },
   {
-    "regex": "Mozilla.{1,100}Mobile.{1,100}AspiegelBot",
+    "regex": "Mozilla.{1,100}Mobile.{1,100}(AspiegelBot|PetalBot)",
     "device_replacement": "Spider",
     "brand_replacement": "Spider",
     "model_replacement": "Smartphone"
   },
   {
-    "regex": "Mozilla.{0,200}AspiegelBot",
+    "regex": "Mozilla.{0,200}(AspiegelBot|PetalBot)",
     "device_replacement": "Spider",
     "brand_replacement": "Spider",
     "model_replacement": "Desktop"
@@ -503,6 +503,30 @@
     "device_replacement": "$1",
     "brand_replacement": "ChangJia",
     "model_replacement": "$1"
+  },
+  {
+    "regex": "CrKey.*DeviceType/([^/]*)",
+    "brand_replacement": "Google",
+    "device_replacement": "Chromecast",
+    "model_replacement": "$1"
+  },
+  {
+    "regex": "Fuchsia.*CrKey",
+    "brand_replacement": "Google",
+    "device_replacement": "Chromecast",
+    "model_replacement": "Nest Hub"
+  },
+  {
+    "regex": "Linux.*CrKey/1.36",
+    "brand_replacement": "Google",
+    "device_replacement": "Chromecast",
+    "model_replacement": "First Generation"
+  },
+  {
+    "regex": "CrKey/",
+    "brand_replacement": "Google",
+    "device_replacement": "Chromecast",
+    "model_replacement": "Chromecast"
   },
   {
     "regex": "; {0,2}(Cloudfone)[ _](Excite)([^ ][^;/]{1,100}?)(?: Build|\\) AppleWebKit)",
@@ -1072,7 +1096,7 @@
     "model_replacement": "$1"
   },
   {
-    "regex": "; {0,2}(ADR6200|ADR6400L|ADR6425LVW|Amaze|DesireS?|EndeavorU|Eris|EVO|Evo\\d[A-Z]+|HD2|IncredibleS?|Inspire[A-Z0-9]*|Inspire[A-Z0-9]*|Sensation[A-Z0-9]*|Wildfire)[ _-](.{1,200}?)(?:[/;\\)]|Build|MIUI|1\\.0)",
+    "regex": "; {0,2}(ADR6200|ADR6400L|ADR6425LVW|Amaze|DesireS?|EndeavorU|Eris|EVO|Evo\\d[A-Z]+|HD2|IncredibleS?|Inspire[A-Z0-9]*|Sensation[A-Z0-9]*|Wildfire)[ _-](.{1,200}?)(?:[/;\\)]|Build|MIUI|1\\.0)",
     "regex_flag": "i",
     "device_replacement": "HTC $1 $2",
     "brand_replacement": "HTC",
@@ -1613,6 +1637,30 @@
     "model_replacement": "$1"
   },
   {
+    "regex": "Quest 3",
+    "device_replacement": "Quest",
+    "brand_replacement": "Meta",
+    "model_replacement": "Quest 3"
+  },
+  {
+    "regex": "Quest 2",
+    "device_replacement": "Quest",
+    "brand_replacement": "Meta",
+    "model_replacement": "Quest 2"
+  },
+  {
+    "regex": "Quest Pro",
+    "device_replacement": "Quest",
+    "brand_replacement": "Meta",
+    "model_replacement": "Quest Pro"
+  },
+  {
+    "regex": "Quest",
+    "device_replacement": "Quest",
+    "brand_replacement": "Meta",
+    "model_replacement": "Quest"
+  },
+  {
     "regex": "; {0,2}(?:Micromax[ _](A111|A240)|(A111|A240)) Build",
     "regex_flag": "i",
     "device_replacement": "Micromax $1$2",
@@ -1895,13 +1943,13 @@
     "model_replacement": "$1"
   },
   {
-    "regex": "; (ONE [a-zA-Z]\\d+)(?: Build|\\) AppleWebKit)",
+    "regex": "; (ONE [a-zA-Z]\\d+)(?: Build|;? {0,2}\\) AppleWebKit)",
     "device_replacement": "OnePlus $1",
     "brand_replacement": "OnePlus",
     "model_replacement": "$1"
   },
   {
-    "regex": "; (ONEPLUS [a-zA-Z]\\d+)(?: Build|\\) AppleWebKit)",
+    "regex": "; (ONEPLUS [a-zA-Z]\\d+)(?: Build|;? {0,2}\\) AppleWebKit)",
     "device_replacement": "OnePlus $1",
     "brand_replacement": "OnePlus",
     "model_replacement": "$1"
@@ -3546,7 +3594,7 @@
     "model_replacement": "Wii U"
   },
   {
-    "regex": "Nintendo (DS|3DS|DSi|Wii);",
+    "regex": "Nintendo (Switch|DS|3DS|DSi|Wii);",
     "device_replacement": "Nintendo $1",
     "brand_replacement": "Nintendo",
     "model_replacement": "$1"
@@ -3742,7 +3790,7 @@
     "model_replacement": "Smartphone"
   },
   {
-    "regex": "^.{0,100}(bot|BUbiNG|zao|borg|DBot|oegp|silk|Xenu|zeal|^NING|CCBot|crawl|htdig|lycos|slurp|teoma|voila|yahoo|Sogou|CiBra|Nutch|^Java/|^JNLP/|Daumoa|Daum|Genieo|ichiro|larbin|pompos|Scrapy|snappy|speedy|spider|msnbot|msrbot|vortex|^vortex|crawler|favicon|indexer|Riddler|scooter|scraper|scrubby|WhatWeb|WinHTTP|bingbot|BingPreview|openbot|gigabot|furlbot|polybot|seekbot|^voyager|archiver|Icarus6j|mogimogi|Netvibes|blitzbot|altavista|charlotte|findlinks|Retreiver|TLSProber|WordPress|SeznamBot|ProoXiBot|wsr\\-agent|Squrl Java|EtaoSpider|PaperLiBot|SputnikBot|A6\\-Indexer|netresearch|searchsight|baiduspider|YisouSpider|ICC\\-Crawler|http%20client|Python-urllib|dataparksearch|converacrawler|Screaming Frog|AppEngine-Google|YahooCacheSystem|fast\\-webcrawler|Sogou Pic Spider|semanticdiscovery|Innovazion Crawler|facebookexternalhit|Google.{0,200}/\\+/web/snippet|Google-HTTP-Java-Client|BlogBridge|IlTrovatore-Setaccio|InternetArchive|GomezAgent|WebThumbnail|heritrix|NewsGator|PagePeeker|Reaper|ZooShot|holmes|NL-Crawler|Pingdom|StatusCake|WhatsApp|masscan|Google Web Preview|Qwantify|Yeti|OgScrper)",
+    "regex": "^.{0,100}(bot|BUbiNG|zao|borg|DBot|oegp|silk|Xenu|zeal|^NING|CCBot|crawl|htdig|lycos|slurp|teoma|voila|yahoo|Sogou|CiBra|Nutch|^Java/|^JNLP/|Daumoa|Daum|Genieo|ichiro|larbin|pompos|Scrapy|snappy|speedy|spider|msnbot|msrbot|vortex|^vortex|crawler|favicon|indexer|Riddler|scooter|scraper|scrubby|WhatWeb|WinHTTP|bingbot|BingPreview|openbot|gigabot|furlbot|polybot|seekbot|^voyager|archiver|Icarus6j|mogimogi|Netvibes|blitzbot|altavista|charlotte|findlinks|Retreiver|TLSProber|WordPress|SeznamBot|ProoXiBot|wsr\\-agent|Squrl Java|EtaoSpider|PaperLiBot|SputnikBot|A6\\-Indexer|netresearch|searchsight|baiduspider|YisouSpider|ICC\\-Crawler|http%20client|Python-urllib|dataparksearch|converacrawler|Screaming Frog|AppEngine-Google|YahooCacheSystem|fast\\-webcrawler|Sogou Pic Spider|semanticdiscovery|Innovazion Crawler|facebookexternalhit|Google.{0,200}/\\+/web/snippet|Google-HTTP-Java-Client|BlogBridge|IlTrovatore-Setaccio|InternetArchive|GomezAgent|WebThumbnail|heritrix|NewsGator|PagePeeker|Reaper|ZooShot|holmes|NL-Crawler|Pingdom|StatusCake|WhatsApp|masscan|Google Web Preview|Qwantify|Yeti|OgScrper|RecipeRadar|GPTBot|Google-InspectionTool)",
     "regex_flag": "i",
     "device_replacement": "Spider",
     "brand_replacement": "Spider",
