@@ -1108,5 +1108,55 @@
       "patch": "2",
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]/9.32.4348.2",
+    {
+      "family": "LinkedInApp",
+      "major": "9",
+      "minor": "32",
+      "patch": "4348",
+      "patch_minor": "2"
+    }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 26_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/23C71 Twitter for iPhone/12.31.1",
+    {
+      "family": "Twitter",
+      "major": "12",
+      "minor": "31",
+      "patch": "1",
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (iPad; CPU OS 8_4_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H321 OverDrive Media Console/3.3.1",
+    {
+      "family": "OverDrive Media Console",
+      "major": "3",
+      "minor": "3",
+      "patch": "1",
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 YJApp-IOS jp.co.yahoo.ipn.appli/4.16.17",
+    {
+      "family": "Yahoo Japan",
+      "major": "4",
+      "minor": "16",
+      "patch": "17",
+      "patch_minor": null
+    }
+  ],
+  [
+    "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent/8624.2.5.10.4 CFNetwork/3860.600.12 Darwin/25.5.0",
+    {
+      "family": "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent",
+      "major": "8624",
+      "minor": "2",
+      "patch": "5",
+      "patch_minor": "10"
+    }
   ]
 ]
