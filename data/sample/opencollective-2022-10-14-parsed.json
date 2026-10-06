@@ -3367,11 +3367,11 @@
     "patch_minor": "92"
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/105.0.1343.53 Version/16.0 Mobile/15E148 Safari/604.1": {
-    "family": "Version",
-    "major": "16",
+    "family": "Edge",
+    "major": "105",
     "minor": "0",
-    "patch": null,
-    "patch_minor": null
+    "patch": "1343",
+    "patch_minor": "53"
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/105.1  Mobile/15E148 Safari/605.1.15": {
     "family": "Firefox",
@@ -3654,11 +3654,11 @@
     "patch_minor": "92"
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/105.0.1343.53 Version/16.0 Mobile/15E148 Safari/604.1": {
-    "family": "Version",
-    "major": "16",
+    "family": "Edge",
+    "major": "105",
     "minor": "0",
-    "patch": null,
-    "patch_minor": null
+    "patch": "1343",
+    "patch_minor": "53"
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 DuckDuckGo/7 Safari/605.1.15": {
     "family": "DuckDuckGo",

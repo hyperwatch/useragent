@@ -25,7 +25,8 @@ function parse(filename) {
     filename.replace('.json', '-parsed.json')
   );
 
-  fs.writeFileSync(parsedFilename, prettyJsonStringify(parsedUas));
+  // With a trailing newline, as Prettier writes it
+  fs.writeFileSync(parsedFilename, `${prettyJsonStringify(parsedUas)}\n`);
 }
 
 fs.readdir(path.join(__dirname, '../data/sample'), (err, filenames) => {
