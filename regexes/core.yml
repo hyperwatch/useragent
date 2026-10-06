@@ -166,6 +166,10 @@ apple_webkit_mobile:
   # Example: Version/13.0 EdgiOS/45.3.19 Mobile/15E148 Safari/605.1.15
   - regex: 'Version\/\d+\.\d+\.?\d* ([\w]+[\w \-\.@]{0,50})\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)? Mobile\/[A-Z0-9]{0,6}'
 
+  # The same, with Version/ after the agent (newer Edge for iOS)
+  # Example: EdgiOS/153.0.4234.46 Version/26.0 Mobile/15E148 Safari/604.1
+  - regex: '([\w]+[\w\-\.@]{0,50})\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)? Version\/\d+\.\d+\.?\d* Mobile\/[A-Z0-9]{0,6}'
+
   # Example: CriOS/83.0.4103.88 Mobile/15E148 Safari/604.1
   # Example: FxiOS/26.0  Mobile/15E148 Safari/605.1.15
   - regex: '(\w+[\w\-\.@]{0,50})\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)?[ ]+Mobile\/[A-Z0-9]{0,6} Safari\/\d+\.\d+\.?\d*$'

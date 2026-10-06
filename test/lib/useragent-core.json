@@ -710,6 +710,26 @@
     }
   ],
   [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 26_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/153.0.4234.46 Version/26.0 Mobile/15E148 Safari/604.1",
+    {
+      "family": "Edge",
+      "major": "153",
+      "minor": "0",
+      "patch": "4234",
+      "patch_minor": "46"
+    }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/120.0.2210.86 Version/17.0 Mobile/15E148 Safari/604.1",
+    {
+      "family": "Edge",
+      "major": "120",
+      "minor": "0",
+      "patch": "2210",
+      "patch_minor": "86"
+    }
+  ],
+  [
     "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/2.20.0 main%2F1.0 baiduboxapp/11.24.0.18 (Baidu; P2 13.5.1) NABar/1.0",
     {
       "family": "baiduboxapp",
