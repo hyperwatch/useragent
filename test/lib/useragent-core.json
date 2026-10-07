@@ -1158,5 +1158,25 @@
       "patch": "5",
       "patch_minor": "10"
     }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Example App/1.2.3",
+    {
+      "family": "Example App",
+      "major": "1",
+      "minor": "2",
+      "patch": "3",
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.17.1",
+    {
+      "family": "Line",
+      "major": "15",
+      "minor": "17",
+      "patch": "1",
+      "patch_minor": null
+    }
   ]
 ]

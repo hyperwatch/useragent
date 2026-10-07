@@ -181,13 +181,16 @@ apple_webkit_mobile:
   # Example: Mobile/15E148 Version/13.1 (Ecosia ios@4.0.17.833) Safari/604.1
   - regex: 'Mobile\/[A-Z0-9]{0,6} Version\/\d+\.\d+\.?\d* \(?([\w]+[\w \-\.@]{0,50})[\/@](\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?\)? Safari\/\d+\.\d+\.?\d*$'
 
+  # An app name of a few words, letters only. Before the next rule, which
+  # would read the first word as an optional prefix and keep only the last;
+  # a leading "Safari " is such a prefix, left to the next rule
+  # (Mobile/15E148 Safari Line/15.17.1 is Line)
+  # Example: Mobile/23C71 Twitter for iPhone/12.31.1
+  - regex: 'Mobile\/[A-Z0-9]{0,6} (?!Safari )([A-Za-z]+(?: [A-Za-z]+){1,3})\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)?$'
+
   # Example: Mobile/15E148 DuckDuckGo/7
   # Example: Mobile/15E148 YJApp-IOS jp.co.yahoo.ipn.appli/4.16.17
   - regex: 'Mobile\/[A-Z0-9]{0,6} (?:[\w\-\.]* )?([\w]+[\w\-\.@]{0,50})\/(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?'
-
-  # An app name of a few words, letters only
-  # Example: Mobile/23C71 Twitter for iPhone/12.31.1
-  - regex: 'Mobile\/[A-Z0-9]{0,6} ([A-Za-z]+(?: [A-Za-z]+){1,3})\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)?$'
 
   # Safari Mobile WebView
   # Example: AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148
