@@ -1108,5 +1108,15 @@
       "patch": "2",
       "patch_minor": null
     }
+  ],
+  [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]/9.32.4348.2",
+    {
+      "family": "LinkedInApp",
+      "major": "9",
+      "minor": "32",
+      "patch": "4348",
+      "patch_minor": "2"
+    }
   ]
 ]

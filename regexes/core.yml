@@ -160,6 +160,10 @@ apple_webkit_mobile:
   # Example: Mobile/15E148 [LinkedInApp]
   - regex: 'Mobile\/[A-Z0-9]{0,6} \[([\w \-\.@]{0,50})\]$'
 
+  # The same, with a version
+  # Example: Mobile/15E148 [LinkedInApp]/9.32.4348.2
+  - regex: 'Mobile\/[A-Z0-9]{0,6} \[([\w \-\.@]{0,50})\]\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)?$'
+
   # Example: Version/7.0 Mobile/11A465 Safari/9537.53 BingPreview/1.0b
   - regex: 'Mobile\/[A-Z0-9]{0,6} Safari\/\d+\.\d+\.?\d* ([\w]+[\w \-\.@]{0,50})\/(\d+)\.(\d+)\.?(\d+)?\.?(\d+)?'
 
