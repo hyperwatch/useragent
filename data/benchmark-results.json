@@ -1,5 +1,5 @@
 {
-  "opencollective-2020-11": {
+  "2020-11": {
     "total": 1525,
     "hyperwatch": {
       "average": 0.00753,
@@ -17,12 +17,12 @@
       "missPercentage": 0
     }
   },
-  "opencollective-2022-10-14": {
+  "2022-10-14": {
     "total": 2558,
     "hyperwatch": {
       "average": 0.0103,
-      "miss": 67,
-      "missPercentage": 2.6
+      "miss": 64,
+      "missPercentage": 2.5
     },
     "uap": {
       "average": 0.0536,
@@ -33,6 +33,24 @@
       "average": 0.0134,
       "miss": 6,
       "missPercentage": 0.23
+    }
+  },
+  "2026-10-06": {
+    "total": 2318,
+    "hyperwatch": {
+      "average": 0.0276,
+      "miss": 184,
+      "missPercentage": 7.9
+    },
+    "uap": {
+      "average": 0.0607,
+      "miss": 253,
+      "missPercentage": 11
+    },
+    "combined": {
+      "average": 0.0335,
+      "miss": 10,
+      "missPercentage": 0.43
     }
   }
 }
