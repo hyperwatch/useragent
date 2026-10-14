@@ -4,11 +4,7 @@ const useragent = require('../src/useragent');
 
 const month = new Date().toISOString().slice(0, 7);
 
-const filename = path.join(
-  __dirname,
-  '../data/sample',
-  `opencollective-${month}-parsed.json`
-);
+const filename = path.join(__dirname, '../data/sample', `${month}-parsed.json`);
 
 let uas;
 try {
