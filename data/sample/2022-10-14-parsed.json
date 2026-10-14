@@ -3143,10 +3143,10 @@
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 15_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]/9.24.3005": {
-    "family": "Safari WebView",
-    "major": null,
-    "minor": null,
-    "patch": null,
+    "family": "LinkedInApp",
+    "major": "9",
+    "minor": "24",
+    "patch": "3005",
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 15_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 247.0.0.12.111 (iPhone14,4; iOS 15_6_1; fr_US; fr-US; scale=2.88; 1080x2338; 388157130) NW/3": {
@@ -3521,17 +3521,17 @@
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]/9.24.2655": {
-    "family": "Safari WebView",
-    "major": null,
-    "minor": null,
-    "patch": null,
+    "family": "LinkedInApp",
+    "major": "9",
+    "minor": "24",
+    "patch": "2655",
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [LinkedInApp]/9.24.3005": {
-    "family": "Safari WebView",
-    "major": null,
-    "minor": null,
-    "patch": null,
+    "family": "LinkedInApp",
+    "major": "9",
+    "minor": "24",
+    "patch": "3005",
     "patch_minor": null
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 255.1.0.18.105 (iPhone12,1; iOS 16_0_2; en_US; en-US; scale=2.00; 828x1792; 405816327)": {

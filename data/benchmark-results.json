@@ -21,8 +21,8 @@
     "total": 2558,
     "hyperwatch": {
       "average": 0.0103,
-      "miss": 67,
-      "missPercentage": 2.6
+      "miss": 64,
+      "missPercentage": 2.5
     },
     "uap": {
       "average": 0.0536,
@@ -39,8 +39,8 @@
     "total": 2318,
     "hyperwatch": {
       "average": 0.0276,
-      "miss": 185,
-      "missPercentage": 8
+      "miss": 184,
+      "missPercentage": 7.9
     },
     "uap": {
       "average": 0.0607,
