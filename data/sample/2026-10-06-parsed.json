@@ -11928,9 +11928,9 @@
     "patch_minor": null
   },
   "Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.io; +https://ibou.io/iboubot.html)": {
-    "family": "ibou.io",
-    "major": null,
-    "minor": null,
+    "family": "IbouBot",
+    "major": "1",
+    "minor": "0",
     "patch": null,
     "patch_minor": null
   },

@@ -220,6 +220,26 @@
     }
   ],
   [
+    "Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.com; +https://www.ibou.com/iboubot.html)",
+    {
+      "family": "IbouBot",
+      "major": "1",
+      "minor": "0",
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
+    "Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.io; +https://ibou.io/iboubot.html)",
+    {
+      "family": "IbouBot",
+      "major": "1",
+      "minor": "0",
+      "patch": null,
+      "patch_minor": null
+    }
+  ],
+  [
     "Opera/9.80 (MAUI Runtime; Opera Mini/4.4.33576/176.145; U; bn) Presto/2.12.423 Version/12.16",
     {
       "family": "Opera Mini",

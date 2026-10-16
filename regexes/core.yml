@@ -278,6 +278,11 @@ generic:
   - regex: '^(\w+[\w \-\.]{0,50}\w+) [\w\.]+@[\w\.]+'
 
 mozilla5_compatible_url:
+  # A contact address between the version and the URL
+  # Example: Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.com; +https://www.ibou.com/iboubot.html)
+  # Example: Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.io; +https://ibou.io/iboubot.html)
+  - regex: 'compatible; ([\w]+[\w \-\.]{0,50})\/v?(\d+)\.?(\d+)?\.?(\d+)?; \+?[\w\.\-]+@[\w\.\-]+; \+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}'
+
   # Example: Mozilla/5.0 (compatible; GoogleDocs; apps-spreadsheets; +http://docs.google.com)
   # Example: Mozilla/5.0 (compatible; MagiBot/1.0.0; Matarael; +https://magi.com/bots)
   - regex: 'compatible; ([\w]+[\w \-\.]{0,50})\/?v?(\d+)?\.?(\d+)?\.?(\d+)?; [\w \-\.]{0,50}; \+?https?:\/\/[A-Za-z0-9\-\.\/]{0,50}'
