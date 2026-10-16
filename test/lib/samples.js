@@ -15,6 +15,9 @@ const useragent = require('../../src/useragent');
 const dir = path.join(__dirname, '../../data/sample');
 const fields = ['family', 'major', 'minor', 'patch', 'patch_minor'];
 const shown = 20;
+// Parsing a sample takes well under a second, but slow CI runners have gone
+// past mocha's default 2 seconds
+const timeout = 10000;
 
 const samples = fs
   .readdirSync(dir)
@@ -67,6 +70,6 @@ describe('samples', () => {
           `${changed.slice(0, shown).join('\n')}${more}`,
         ].join('\n')
       );
-    });
+    }).timeout(timeout);
   }
 });
