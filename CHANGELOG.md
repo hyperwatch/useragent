@@ -2,6 +2,21 @@
 
 Releases are also on [GitHub](https://github.com/hyperwatch/useragent/releases). Versions before 4.0.0 have no entry: see the git history.
 
+## 4.0.2 (2026-11-10)
+
+One parsing fix. No API changes.
+
+### A contact address between the version and the URL ([#227](https://github.com/hyperwatch/useragent/pull/227))
+
+`compatible; Name/version; <address>; +URL` user agents were parsed as the URL's host:
+
+    Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.com; +https://www.ibou.com/iboubot.html)
+    before: www.ibou.com    after: IbouBot 1.0
+
+### Node.js 22 or later ([#225](https://github.com/hyperwatch/useragent/pull/225))
+
+`engines` goes from `>=24` to `>=22`. Nothing in the package needs Node 24; Node 22 is now in the CI matrix.
+
 ## 4.0.1 (2026-10-09)
 
 Two parsing fixes for iOS user agents. No API changes.
