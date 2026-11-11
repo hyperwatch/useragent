@@ -45,6 +45,19 @@ Returns:
 
 For more details, [read the dedicated API documentation](docs/API.md).
 
+### TypeScript
+
+The package ships its type definitions (`src/useragent.d.ts`):
+
+```ts
+import useragent from '@hyperwatch/useragent'; // with esModuleInterop
+// or: import useragent = require('@hyperwatch/useragent');
+
+const agent = useragent.parse(userAgentString);
+agent.family; // string | null
+agent.os?.family; // string | null | undefined
+```
+
 ## Regexes
 
 ### First
