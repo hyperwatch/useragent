@@ -553,7 +553,7 @@ exports.parse = function parse(
 
   // We might still be able to parse the os and device,
   // so make sure we supply it with the source
-  return new Agent(null, null, null, null, null, null, userAgent);
+  return new Agent(null, null, null, null, null, userAgent);
 };
 
 /**

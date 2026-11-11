@@ -32,5 +32,39 @@
         "model": "Quest 3"
       }
     }
+  ],
+  [
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML",
+    {
+      "os": {
+        "family": "Mac OS X",
+        "major": "10",
+        "minor": "15",
+        "patch": "7",
+        "patch_minor": null
+      },
+      "device": {
+        "family": "Mac",
+        "brand": "Apple",
+        "model": "Mac"
+      }
+    }
+  ],
+  [
+    "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko)",
+    {
+      "os": {
+        "family": "Mac OS X",
+        "major": null,
+        "minor": null,
+        "patch": null,
+        "patch_minor": null
+      },
+      "device": {
+        "family": "Mac",
+        "brand": "Apple",
+        "model": "Mac"
+      }
+    }
   ]
 ]
