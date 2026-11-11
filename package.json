@@ -18,6 +18,7 @@
   "scripts": {
     "build": "tsc",
     "depcheck": "depcheck",
+    "prelint": "npm run build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepack": "npm run build",
