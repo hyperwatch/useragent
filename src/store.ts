@@ -1,19 +1,18 @@
-const fs = require('fs');
-const path = require('path');
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 
-const utils = require('./utils');
+import { alphabeticalSort, prettyJsonStringify } from './utils';
 
-const { alphabeticalSort, prettyJsonStringify } = utils;
+const uas: Record<string, string[]> = {};
 
-const uas = {};
-
-function store(ua) {
+function store(ua: string): void {
   const date = new Date().toISOString().slice(0, 10);
   const filename = path.join(__dirname, '../data/store', `${date}.json`);
   if (uas[date] === undefined) {
     try {
-      uas[date] = require(filename);
-    } catch (err) {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      uas[date] = require(filename) as string[];
+    } catch {
       uas[date] = [];
     }
   }
@@ -27,4 +26,4 @@ function store(ua) {
   }
 }
 
-module.exports = store;
+export default store;
