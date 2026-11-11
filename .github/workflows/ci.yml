@@ -49,6 +49,17 @@ jobs:
       - run: npm install
       - run: npm run prettier:check
 
+  types:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+      - run: npm install
+      - run: npm run test:types
+
   depcheck:
     runs-on: ubuntu-latest
 

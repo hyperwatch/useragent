@@ -20,12 +20,14 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepare": "node .husky/install.mjs",
-    "prettier": "prettier \"**/*.@(js|json|md|yml)\"",
+    "prettier": "prettier \"**/*.@(js|json|md|ts|yml)\"",
     "prettier:check": "npm run prettier -- --list-different",
     "prettier:write": "npm run prettier -- --write",
     "test": "mocha --recursive",
+    "test:types": "tsc -p test/types",
     "update": "node scripts/update && npm run prettier:write"
   },
+  "types": "src/useragent.d.ts",
   "dependencies": {
     "debug": "^4.4.3",
     "lodash": "^4.18.1"
@@ -42,6 +44,7 @@
     "mocha": "^12.0.3",
     "prettier": "^3.9.9",
     "prettier-package-json": "^2.8.0",
+    "typescript": "^7.0.2",
     "yamlparser": "0.0.2"
   },
   "engines": {
@@ -56,7 +59,7 @@
     ]
   },
   "lint-staged": {
-    "*.{js,json,md,yml}": [
+    "*.{js,json,md,ts,yml}": [
       "prettier --write"
     ],
     "package.json": [
