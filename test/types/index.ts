@@ -14,8 +14,10 @@ const osFamily: string | null | undefined = os?.family;
 const device: Device | null = agent.device;
 const model: string | null | undefined = device?.model;
 const type: string | null = agent.type;
-const text: string = agent.toAgent() + agent.toString() + agent.toVersion();
-const osText: string | undefined = os?.toString();
+const text: string = agent.toString() + agent.toVersion();
+const agentText: string | null = agent.toAgent();
+const osText: string | null | undefined = os?.toString();
+const deviceText: string | null | undefined = device?.toString();
 
 // Only the regex sets can be turned off.
 parse('curl/8.0', true, false, false);
@@ -42,6 +44,12 @@ parse(undefined);
 useragent.addRegex('core', { regex: 'x' });
 // @ts-expect-error the family can be null.
 const notNull: string = agent.family;
+// @ts-expect-error null when nothing was recognised.
+parse('').toAgent().trim();
+// @ts-expect-error null without a family.
+new Os().toString().trim();
+// @ts-expect-error null without a family.
+new Device().toString().trim();
 
 export {
   family,
@@ -51,7 +59,9 @@ export {
   model,
   type,
   text,
+  agentText,
   osText,
+  deviceText,
   again,
   fromString,
   notNull,

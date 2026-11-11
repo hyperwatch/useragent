@@ -43,8 +43,8 @@ declare namespace useragent {
     minor: string | null;
     patch: string | null;
     patch_minor: string | null;
-    /** "Mac OS X 10.15.7" */
-    toString(): string;
+    /** "Mac OS X 10.15.7"; null without a family. */
+    toString(): string | null;
     /** "10.15.7", or "" without a major version. */
     toVersion(): string;
     toJSON(): OsJSON;
@@ -60,7 +60,8 @@ declare namespace useragent {
     family: string | null;
     brand: string | null;
     model: string | null;
-    toString(): string;
+    /** The family; null without one. */
+    toString(): string | null;
     toVersion(): string;
     toJSON(): DeviceJSON;
   }
@@ -89,9 +90,9 @@ declare namespace useragent {
     os: Os | null;
     /** The device, or null when none was found. Can be set to a `Device`. */
     device: Device | null;
-    /** "Firefox 82.0" */
-    toAgent(): string;
-    /** "Firefox 82.0 / Mac OS X 10.15" */
+    /** "Firefox 82.0"; null when nothing was recognised (no family, no version). */
+    toAgent(): string | null;
+    /** "Firefox 82.0 / Mac OS X 10.15" ("null" when nothing was recognised). */
     toString(): string;
     /** "82.0", or "" without a major version. */
     toVersion(): string;
