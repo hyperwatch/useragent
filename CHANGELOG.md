@@ -2,6 +2,29 @@
 
 Releases are also on [GitHub](https://github.com/hyperwatch/useragent/releases). Versions before 4.0.0 have no entry: see the git history.
 
+## 4.1.0 (2026-11-12)
+
+TypeScript definitions, and one parsing fix.
+
+### TypeScript definitions ([#229](https://github.com/hyperwatch/useragent/pull/229))
+
+The package ships `src/useragent.d.ts` (`types` in `package.json`): `parse`, `fromJSON`, `addRegex`, and the `Agent`, `Os` and `Device` classes with their properties and methods. A TypeScript project no longer gets `any`, or an error under `noImplicitAny`. They follow the code:
+
+- `family` and the versions are `string | null`; `os`, `device` and `type` are `null` when nothing is found.
+- `parse` takes a string (it throws on `undefined` and `null`).
+- `addRegex` takes the regex sets that are arrays (`first`, `extra`, `uapCoreAgent`, `uapCoreOs`, `uapCoreDevice`).
+
+They work from CommonJS (`import useragent = require('@hyperwatch/useragent')`) and ESM, with `nodenext` and `bundler` resolution.
+
+### The OS and device of an agent nothing matched ([#231](https://github.com/hyperwatch/useragent/pull/231))
+
+When no agent regex matched, the user agent was dropped, so `os` and `device`, parsed from it, were always `null`. They are now parsed:
+
+    Mozilla/5.0 (PlayStation 4 2.57) AppleWebKit/537.73 (KHTML, like Gecko)
+    before: device null    after: PlayStation 4
+
+`family` and the versions of such agents are unchanged (`null`), and agents that matched are unaffected.
+
 ## 4.0.2 (2026-11-10)
 
 One parsing fix. No API changes.
