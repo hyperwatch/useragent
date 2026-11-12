@@ -1,3 +1,4 @@
 node_modules
 data/store/*.json
 package-lock.json
+dist
