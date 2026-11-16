@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const benchmarkResults = require('../data/benchmark-results.json');
-const useragent = require('../src/useragent');
+const useragent = require('../dist/useragent');
 const {
   average,
   formatPercentage,
   formatWithPrecision,
   shuffle,
   prettyJsonStringify,
-} = require('../src/utils');
+} = require('../dist/utils');
 
 function benchmarkSample(filename) {
   let uas;

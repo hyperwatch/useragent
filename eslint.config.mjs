@@ -2,10 +2,11 @@ import js from '@eslint/js';
 import importX from 'eslint-plugin-import-x';
 import nodePlugin from 'eslint-plugin-n';
 import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default [
   {
-    ignores: ['eslint.config.mjs'],
+    ignores: ['eslint.config.mjs', 'dist/**'],
   },
   js.configs.recommended,
   nodePlugin.configs['flat/recommended'],
@@ -77,6 +78,41 @@ export default [
           'newlines-between': 'always',
         },
       ],
+    },
+  },
+  // The sources and the type test, in TypeScript: typescript-eslint's
+  // recommended rules, type-checked, on top of the above
+  ...tseslint.configs.recommendedTypeChecked.map((config) => ({
+    ...config,
+    files: ['src/**/*.ts', 'test/types/**/*.ts'],
+  })),
+  {
+    files: ['src/**/*.ts', 'test/types/**/*.ts'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    settings: {
+      'import-x/resolver': { node: { extensions: ['.ts', '.js'] } },
+    },
+    rules: {
+      // TypeScript checks these
+      'n/no-missing-import': 'off',
+      'n/no-missing-require': 'off',
+      'import-x/no-unresolved': 'off',
+      'import-x/named': 'off',
+      'import-x/namespace': 'off',
+      'import-x/default': 'off',
+      'import-x/no-named-as-default-member': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { vars: 'all', caughtErrors: 'none' },
+      ],
+      // TypeScript syntax Node can't run itself: the sources are compiled
+      'n/no-unsupported-features/es-syntax': 'off',
     },
   },
   // Test files: add mocha globals

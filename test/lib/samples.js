@@ -5,7 +5,7 @@ const { isDeepStrictEqual } = require('util');
 
 const { pick } = require('lodash');
 
-const useragent = require('../../src/useragent');
+const useragent = require('../../dist/useragent');
 
 // Every user agent of data/sample/<name>.json must still parse as recorded in
 // <name>-parsed.json. After an intended change (a new rule, a UAP update),

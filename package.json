@@ -8,32 +8,38 @@
     "type": "git",
     "url": "https://github.com/hyperwatch/useragent.git"
   },
-  "main": "src/useragent.js",
+  "main": "dist/useragent.js",
   "files": [
     ".husky/install.mjs",
+    "dist",
     "regexes/*.json",
-    "regexes/index.js",
-    "src"
+    "regexes/index.js"
   ],
   "scripts": {
+    "build": "tsc",
     "depcheck": "depcheck",
+    "prelint": "npm run build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
+    "prepack": "npm run build",
     "prepare": "node .husky/install.mjs",
     "prettier": "prettier \"**/*.@(js|json|md|ts|yml)\"",
     "prettier:check": "npm run prettier -- --list-different",
     "prettier:write": "npm run prettier -- --write",
+    "pretest": "npm run build",
     "test": "mocha --recursive",
-    "test:types": "tsc -p test/types",
+    "test:types": "npm run build && tsc -p test/types",
     "update": "node scripts/update && npm run prettier:write"
   },
-  "types": "src/useragent.d.ts",
+  "types": "dist/useragent.d.ts",
   "dependencies": {
     "debug": "^4.4.3",
     "lodash": "^4.18.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/debug": "^4.1.13",
+    "@types/node": "^22.20.5",
     "depcheck": "^1.4.7",
     "eslint": "^10.12.0",
     "eslint-plugin-import-x": "^4.17.1",
@@ -44,7 +50,8 @@
     "mocha": "^12.0.3",
     "prettier": "^3.9.9",
     "prettier-package-json": "^2.8.0",
-    "typescript": "^7.0.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
     "yamlparser": "0.0.2"
   },
   "engines": {

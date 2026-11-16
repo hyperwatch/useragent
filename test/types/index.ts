@@ -1,7 +1,8 @@
 // Type-checked by `npm run test:types` (tsc), never run: the declarations in
-// src/useragent.d.ts against the ways the package is used.
-import useragent = require('../../src/useragent');
-import { Agent, Device, Os, fromJSON, parse } from '../../src/useragent';
+// dist/useragent.d.ts against the ways the package is used.
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- a way the package is used
+import useragent = require('../../dist/useragent');
+import { Agent, Device, Os, fromJSON, parse } from '../../dist/useragent';
 
 const agent: Agent = useragent.parse(
   'Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1'

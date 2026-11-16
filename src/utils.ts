@@ -1,24 +1,24 @@
-function alphabeticalSort(a, b) {
+export function alphabeticalSort(a: string, b: string): number {
   return a.toLowerCase().localeCompare(b.toLowerCase());
 }
 
-function average(nums) {
+export function average(nums: number[]): number {
   return nums.reduce((a, b) => a + b) / nums.length;
 }
 
-function formatPercentage(value) {
+export function formatPercentage(value: number): number {
   return Number((100 * value).toPrecision(2));
 }
 
-function formatWithPrecision(value, precision = 3) {
+export function formatWithPrecision(value: number, precision = 3): number {
   return Number(value.toPrecision(precision));
 }
 
-function prettyJsonStringify(value) {
+export function prettyJsonStringify(value: unknown): string {
   return JSON.stringify(value, null, 2);
 }
 
-function replaceMatches(string, res) {
+export function replaceMatches(string: string, res: RegExpExecArray): string {
   return string
     .replace('$1', res[1])
     .replace('$2', res[2])
@@ -26,7 +26,7 @@ function replaceMatches(string, res) {
     .replace('$4', res[4]);
 }
 
-function shuffle(array) {
+export function shuffle<T>(array: T[]): T[] {
   let currentIndex = array.length,
     temporaryValue,
     randomIndex;
@@ -45,13 +45,3 @@ function shuffle(array) {
 
   return array;
 }
-
-module.exports = {
-  alphabeticalSort,
-  average,
-  formatPercentage,
-  formatWithPrecision,
-  prettyJsonStringify,
-  replaceMatches,
-  shuffle,
-};

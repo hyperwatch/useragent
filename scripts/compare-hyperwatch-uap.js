@@ -1,6 +1,6 @@
 const path = require('path');
 
-const useragent = require('../src/useragent');
+const useragent = require('../dist/useragent');
 
 const month = new Date().toISOString().slice(0, 7);
 

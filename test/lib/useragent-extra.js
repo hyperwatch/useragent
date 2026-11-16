@@ -2,7 +2,7 @@ const assert = require('assert');
 
 const { pick } = require('lodash');
 
-const useragent = require('../../src/useragent');
+const useragent = require('../../dist/useragent');
 
 const tests = require('./useragent-extra.json');
 

@@ -3,8 +3,8 @@ const path = require('path');
 
 const { pick } = require('lodash');
 
-const useragent = require('../src/useragent');
-const { prettyJsonStringify } = require('../src/utils');
+const useragent = require('../dist/useragent');
+const { prettyJsonStringify } = require('../dist/utils');
 
 function parse(filename) {
   const uas = require(path.join(__dirname, '../data/sample', filename));

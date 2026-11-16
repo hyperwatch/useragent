@@ -47,7 +47,7 @@ For more details, [read the dedicated API documentation](docs/API.md).
 
 ### TypeScript
 
-The package ships its type definitions (`src/useragent.d.ts`):
+The package is written in TypeScript (`src/`) and ships its type definitions with the compiled code (`dist/`):
 
 ```ts
 import useragent from '@hyperwatch/useragent'; // with esModuleInterop
@@ -57,6 +57,12 @@ const agent = useragent.parse(userAgentString);
 agent.family; // string | null
 agent.os?.family; // string | null | undefined
 ```
+
+Named imports work too, from TypeScript and from ES modules: `import { parse } from '@hyperwatch/useragent'`.
+
+## Development
+
+`npm run build` compiles `src/` to `dist/` (`npm test` builds first; `npm pack` and `npm publish` too).
 
 ## Regexes
 

@@ -3,7 +3,7 @@ const path = require('path');
 
 const yaml = require('yamlparser'); // eslint-disable-line n/no-unpublished-require
 
-const { prettyJsonStringify } = require('../src/utils');
+const { prettyJsonStringify } = require('../dist/utils');
 
 fetch(
   'https://raw.githubusercontent.com/ua-parser/uap-core/master/regexes.yaml'

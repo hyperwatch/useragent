@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const useragent = require('../../src/useragent');
+const useragent = require('../../dist/useragent');
 
 const tests = require('./useragent-os-device.json');
 
