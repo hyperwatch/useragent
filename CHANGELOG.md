@@ -2,6 +2,18 @@
 
 Releases are also on [GitHub](https://github.com/hyperwatch/useragent/releases). Versions before 4.0.0 have no entry: see the git history.
 
+## 4.1.1 (2026-11-16)
+
+The library is written in TypeScript. Nothing changes for users.
+
+### TypeScript sources ([#230](https://github.com/hyperwatch/useragent/pull/230))
+
+The sources are TypeScript, compiled to CommonJS in `dist/`, which the package publishes instead of `src/`. The type definitions now come from the code instead of the hand-written `src/useragent.d.ts`.
+
+- `require('@hyperwatch/useragent')` gives the same names (`Agent`, `Os`, `Device`, `parse`, `fromJSON`, `addRegex`), plus `default`.
+- ES modules keep their named imports (`import { parse } from '@hyperwatch/useragent'`), and a default import gives the same functions and classes.
+- Parsing is the same: the 6,120 distinct user agents of `data/sample` give identical results, at the same speed.
+
 ## 4.1.0 (2026-11-12)
 
 TypeScript definitions, and one parsing fix.
