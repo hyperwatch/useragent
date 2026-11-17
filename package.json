@@ -50,7 +50,7 @@
     "mocha": "^12.0.3",
     "prettier": "^3.9.9",
     "prettier-package-json": "^2.8.0",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.72.2",
     "yamlparser": "0.0.2"
   },
